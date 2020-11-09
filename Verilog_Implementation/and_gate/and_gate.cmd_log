@@ -1,0 +1,6 @@
+xst -intstyle ise -ifn "X:/0_xlinx_ISE/and_gate/and_gate.xst" -ofn "X:/0_xlinx_ISE/and_gate/and_gate.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -i -p xc3s700a-fg484-4 and_gate.ngc and_gate.ngd  
+map -intstyle ise -p xc3s700a-fg484-4 -cm area -ir off -pr off -c 100 -o and_gate_map.ncd and_gate.ngd and_gate.pcf 
+par -w -intstyle ise -ol high -t 1 and_gate_map.ncd and_gate.ncd and_gate.pcf 
+trce -intstyle ise -v 3 -s 4 -n 3 -fastpaths -xml and_gate.twx and_gate.ncd -o and_gate.twr and_gate.pcf 
+bitgen -intstyle ise -f and_gate.ut and_gate.ncd 

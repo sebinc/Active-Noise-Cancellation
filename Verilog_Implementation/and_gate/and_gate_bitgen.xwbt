@@ -1,0 +1,8 @@
+INTSTYLE=ise
+INFILE=X:\0_xlinx_ISE\and_gate\and_gate.ncd
+OUTFILE=X:\0_xlinx_ISE\and_gate\and_gate.bit
+FAMILY=Spartan3A and Spartan3AN
+PART=xc3s700a-4fg484
+WORKINGDIR=X:\0_xlinx_ISE\and_gate
+LICENSE=WebPack
+USER_INFO=176271483_0_0_757

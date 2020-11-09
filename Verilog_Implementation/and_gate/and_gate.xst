@@ -1,0 +1,5 @@
+set -tmpdir "X:/0_xlinx_ISE/and_gate/xst/projnav.tmp"
+set -xsthdpdir "X:/0_xlinx_ISE/and_gate/xst"
+elaborate
+-ifn and_gate.prj
+-ifmt mixed
