@@ -1,0 +1,1 @@
+vhdtdtfi -lang verilog -prj ANC_Top_2.0 -o X:/0_xlinx_ISE/ANC_Top_2.0/Greater_v.tfi -lib work X:/0_xlinx_ISE/ANC_Top_2.0//Greater_V.v -module Greater_v -template C:/Xilinx/14.1/ISE_DS/ISE//data/tfi.tft -deleteonerror 

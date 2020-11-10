@@ -1,0 +1,3 @@
+verilog isim_temp "SignedAdder.v"
+verilog isim_temp "SignedAdder_tb.v"
+verilog isim_temp "C:/Xilinx/14.1/ISE_DS/ISE//verilog/src/glbl.v"

@@ -1,0 +1,1 @@
+-intstyle "ise" -incremental -lib "unisims_ver" -lib "unimacro_ver" -lib "xilinxcorelib_ver" -lib "secureip" -o "X:/0_xlinx_ISE/PWM_v/PWM_tb_isim_beh.exe" -prj "X:/0_xlinx_ISE/PWM_v/PWM_tb_beh.prj" "work.PWM_tb" "work.glbl" 

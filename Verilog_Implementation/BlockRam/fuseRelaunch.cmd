@@ -1,0 +1,1 @@
+-intstyle "ise" -incremental -lib "unisims_ver" -lib "unimacro_ver" -lib "xilinxcorelib_ver" -lib "secureip" -o "X:/0_xlinx_ISE/BlockRam/Ram_test_isim_beh.exe" -prj "X:/0_xlinx_ISE/BlockRam/Ram_test_beh.prj" "work.Ram_test" "work.glbl" 

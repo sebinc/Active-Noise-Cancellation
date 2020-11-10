@@ -1,0 +1,5 @@
+verilog work "Signal_compare.v"
+verilog work "RS_FF.v"
+verilog work "PWM_v.v"
+verilog work "PWM_tb.v"
+verilog work "C:/Xilinx/14.1/ISE_DS/ISE//verilog/src/glbl.v"

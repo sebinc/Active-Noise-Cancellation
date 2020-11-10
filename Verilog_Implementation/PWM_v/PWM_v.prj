@@ -1,0 +1,3 @@
+verilog work "Signal_compare.v"
+verilog work "RS_FF.v"
+verilog work "PWM_v.v"

@@ -1,0 +1,60 @@
+ISim log file
+Running: X:\0_xlinx_ISE\PWM_v\PWM_tb_isim_beh.exe -intstyle ise -gui -tclbatch isim.cmd -wdb X:/0_xlinx_ISE/PWM_v/PWM_tb_isim_beh.wdb 
+ISim P.15xf (signature 0xc3576ebc)
+This is a Full version of ISim.
+Time resolution is 1 ps
+# onerror resume
+# wave add /
+# run 1000 ns
+Simulator is doing circuit initialization process.
+Finished circuit initialization process.
+# run 30.00us
+# run 30.00us
+# run 30.00us
+ISim P.15xf (signature 0xc3576ebc)
+This is a Full version of ISim.
+# run 1000 ns
+Simulator is doing circuit initialization process.
+Finished circuit initialization process.
+# run 30.00us
+ISim P.15xf (signature 0xc3576ebc)
+This is a Full version of ISim.
+# run 1000 ns
+Simulator is doing circuit initialization process.
+Finished circuit initialization process.
+# run 30.00us
+# run 30.00us
+ISim P.15xf (signature 0xc3576ebc)
+This is a Full version of ISim.
+# run 1000 ns
+Simulator is doing circuit initialization process.
+Finished circuit initialization process.
+ISim P.15xf (signature 0xc3576ebc)
+This is a Full version of ISim.
+# run 1000 ns
+Simulator is doing circuit initialization process.
+Finished circuit initialization process.
+ISim P.15xf (signature 0xc3576ebc)
+This is a Full version of ISim.
+# run 1000 ns
+Simulator is doing circuit initialization process.
+Finished circuit initialization process.
+# run 30.00us
+# run 30.00us
+ISim P.15xf (signature 0xc3576ebc)
+This is a Full version of ISim.
+# run 1000 ns
+Simulator is doing circuit initialization process.
+Finished circuit initialization process.
+# run 30.00us
+# run 30.00us
+# run 30.00us
+ISim P.15xf (signature 0xc3576ebc)
+This is a Full version of ISim.
+# run 1000 ns
+Simulator is doing circuit initialization process.
+Finished circuit initialization process.
+# run 30.00us
+# run 30.00us
+# run 30.00us
+# run 30.00us

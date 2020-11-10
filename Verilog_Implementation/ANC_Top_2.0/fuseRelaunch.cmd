@@ -1,0 +1,1 @@
+-intstyle "ise" -incremental -lib "unisims_ver" -lib "unimacro_ver" -lib "xilinxcorelib_ver" -lib "secureip" -o "X:/0_xlinx_ISE/ANC_Top_2.0/ANCTop_Tb_isim_beh.exe" -prj "X:/0_xlinx_ISE/ANC_Top_2.0/ANCTop_Tb_beh.prj" "work.ANCTop_Tb" "work.glbl" 

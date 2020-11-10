@@ -1,0 +1,19 @@
+Running: C:\Xilinx\14.1\ISE_DS\ISE\bin\nt64\unwrapped\fuse.exe -intstyle ise -incremental -lib unisims_ver -lib unimacro_ver -lib xilinxcorelib_ver -lib secureip -o X:/0_xlinx_ISE/SPI_Slave/ShiftRegister_T_isim_beh.exe -prj X:/0_xlinx_ISE/SPI_Slave/ShiftRegister_T_beh.prj work.ShiftRegister_T work.glbl 
+ISim P.15xf (signature 0xc3576ebc)
+Number of CPUs detected in this system: 4
+Turning on mult-threading, number of parallel sub-compilation jobs: 8 
+Determining compilation order of HDL files
+Analyzing Verilog file "X:/0_xlinx_ISE/SPI_Slave/shift_register_v.v" into library work
+Analyzing Verilog file "X:/0_xlinx_ISE/SPI_Slave/ShiftRegister_T.v" into library work
+Analyzing Verilog file "C:/Xilinx/14.1/ISE_DS/ISE//verilog/src/glbl.v" into library work
+Starting static elaboration
+Completed static elaboration
+Compiling module shift_register_v
+Compiling module ShiftRegister_T
+Compiling module glbl
+Time Resolution for simulation is 1ps.
+Waiting for 1 sub-compilation(s) to finish...
+Compiled 3 Verilog Units
+Built simulation executable X:/0_xlinx_ISE/SPI_Slave/ShiftRegister_T_isim_beh.exe
+Fuse Memory Usage: 25084 KB
+Fuse CPU Usage: 437 ms

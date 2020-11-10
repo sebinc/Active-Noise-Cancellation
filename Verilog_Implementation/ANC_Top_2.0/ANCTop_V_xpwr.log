@@ -1,0 +1,21 @@
+Loading device for application Rf_Device from file '6slx9.nph' in environment
+C:\Xilinx\14.1\ISE_DS\ISE\.
+   "ANCTop_V" is an NCD, version 3.2, device xc6slx9, package csg324, speed -2
+
+INFO:Power:1693 - 
+   --------------------------------------------------------------
+                         The power estimate will be calculated using PRODUCTION
+   data.
+   --------------------------------------------------------------
+
+Design load 20% completeDesign load 25% completeDesign load 30% completeDesign load 60% completeDesign load 95% completeDesign load 100% completeWARNING:PowerEstimator:270 - Power estimate is considered inaccurate. To see details, generate an advanced report with the "-v" switch.
+Running Vector-less Activity Propagation
+..........
+Finished Running Vector-less Activity Propagation
+Finished Running Vector-less Activity Propagation 0 secs 
+Power report saved as ANCTop_V.pwr.
+
+Number of error messages: 0
+Number of warning messages: 1
+Number of info messages: 1
+

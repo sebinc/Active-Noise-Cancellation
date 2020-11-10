@@ -1,0 +1,11 @@
+
+
+
+// Instantiate the module
+Greater_v instance_name (
+    .x(x), 
+    .y(y), 
+    .x_grtr_y(x_grtr_y)
+    );
+
+

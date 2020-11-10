@@ -1,0 +1,23 @@
+//! **************************************************************************
+// Written by: Map P.15xf on Thu Aug 23 00:02:28 2018
+//! **************************************************************************
+
+SCHEMATIC START;
+CONFIG VCCAUX = "3.3";
+COMP "SPI_LED" LOCATE = SITE "P15" LEVEL 1;
+COMP "SDI" LOCATE = SITE "T4" LEVEL 1;
+COMP "SCK" LOCATE = SITE "U7" LEVEL 1;
+COMP "SDO" LOCATE = SITE "U5" LEVEL 1;
+COMP "ResetSwitch" LOCATE = SITE "M18" LEVEL 1;
+COMP "SPIDataLED<0>" LOCATE = SITE "T18" LEVEL 1;
+COMP "SPIDataLED<1>" LOCATE = SITE "T17" LEVEL 1;
+COMP "SPIDataLED<2>" LOCATE = SITE "U18" LEVEL 1;
+COMP "SPIDataLED<3>" LOCATE = SITE "U17" LEVEL 1;
+COMP "SPIDataLED<4>" LOCATE = SITE "N16" LEVEL 1;
+COMP "SPIDataLED<5>" LOCATE = SITE "N15" LEVEL 1;
+COMP "Clk_100MIn" LOCATE = SITE "V10" LEVEL 1;
+COMP "AudioL" LOCATE = SITE "B16" LEVEL 1;
+COMP "AudioR" LOCATE = SITE "A16" LEVEL 1;
+NET "Clk_100MIn_BUFGP/IBUFG" PERIOD = 10 ns HIGH 50%;
+SCHEMATIC END;
+

@@ -1,0 +1,42 @@
+Release 14.1 ngdbuild P.15xf (nt64)
+Copyright (c) 1995-2012 Xilinx, Inc.  All rights reserved.
+
+Command Line: C:\Xilinx\14.1\ISE_DS\ISE\bin\nt64\unwrapped\ngdbuild.exe
+-intstyle ise -dd _ngo -sd ipcore_dir -nt timestamp -uc
+mimasv2_user_constraints_file.ucf -p xc6slx9-csg324-2 ANCTop_V.ngc ANCTop_V.ngd
+
+Reading NGO file "X:/0_xlinx_ISE/ANC_Top_2.0/ANCTop_V.ngc" ...
+Loading design module "ipcore_dir/BlockRam.ngc"...
+Gathering constraint information from source properties...
+Done.
+
+Annotating constraints to design from ucf file
+"mimasv2_user_constraints_file.ucf" ...
+Resolving constraint associations...
+Checking Constraint Associations...
+INFO:ConstraintSystem - The Period constraint <PERIOD = 100 MHz HIGH 50%;>
+   [mimasv2_user_constraints_file.ucf(13)], is specified using the Net Period
+   method which is not recommended. Please use the Timespec PERIOD method.
+
+Done...
+
+Checking expanded design ...
+
+Partition Implementation Status
+-------------------------------
+
+  No Partitions were found in this design.
+
+-------------------------------
+
+NGDBUILD Design Results Summary:
+  Number of errors:     0
+  Number of warnings:   0
+
+Total memory usage is 187936 kilobytes
+
+Writing NGD file "ANCTop_V.ngd" ...
+Total REAL time to NGDBUILD completion:  5 sec
+Total CPU time to NGDBUILD completion:   5 sec
+
+Writing NGDBUILD log file "ANCTop_V.bld"...

@@ -1,0 +1,11 @@
+
+
+
+// Instantiate the module
+Signal_compare instance_name (
+    .R(R), 
+    .C(C), 
+    .Result(Result)
+    );
+
+

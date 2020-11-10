@@ -1,0 +1,1 @@
+vhdtdtfi -lang verilog -prj PWM_v -o X:/0_xlinx_ISE/PWM_v/Signal_compare.tfi -lib work X:/0_xlinx_ISE/PWM_v//Signal_compare.v -module Signal_compare -template C:/Xilinx/14.1/ISE_DS/ISE//data/tfi.tft -deleteonerror 

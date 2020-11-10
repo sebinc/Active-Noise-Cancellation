@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<wave_config>
+   <wave_state>
+   </wave_state>
+   <db_ref_list>
+      <db_ref path="X:/0_xlinx_ISE/ANC_Top_2.0/ANCDataMem_Tb_isim_beh.wdb" id="1" type="auto">
+         <top_modules>
+            <top_module name="ANCDataMem_Tb" />
+            <top_module name="glbl" />
+         </top_modules>
+      </db_ref>
+   </db_ref_list>
+   <WVObjectSize size="15" />
+   <wvobject fp_name="/ANCDataMem_Tb/DataOut" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">DataOut[10:0]</obj_property>
+      <obj_property name="ObjectShortName">DataOut[10:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/ANCDataMem_Tb/RamShiftEN" type="logic" db_ref_id="1">
+      <obj_property name="ElementShortName">RamShiftEN</obj_property>
+      <obj_property name="ObjectShortName">RamShiftEN</obj_property>
+   </wvobject>
+   <wvobject fp_name="/ANCDataMem_Tb/FilterEN" type="logic" db_ref_id="1">
+      <obj_property name="ElementShortName">FilterEN</obj_property>
+      <obj_property name="ObjectShortName">FilterEN</obj_property>
+   </wvobject>
+   <wvobject fp_name="/ANCDataMem_Tb/Reset" type="logic" db_ref_id="1">
+      <obj_property name="ElementShortName">Reset</obj_property>
+      <obj_property name="ObjectShortName">Reset</obj_property>
+   </wvobject>
+   <wvobject fp_name="/ANCDataMem_Tb/Clk_100M" type="logic" db_ref_id="1">
+      <obj_property name="ElementShortName">Clk_100M</obj_property>
+      <obj_property name="ObjectShortName">Clk_100M</obj_property>
+   </wvobject>
+   <wvobject fp_name="/ANCDataMem_Tb/SPIData" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">SPIData[10:0]</obj_property>
+      <obj_property name="ObjectShortName">SPIData[10:0]</obj_property>
+      <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+   </wvobject>
+   <wvobject fp_name="/ANCDataMem_Tb/uut/DataRam/clka" type="logic" db_ref_id="1">
+      <obj_property name="ElementShortName">clka</obj_property>
+      <obj_property name="ObjectShortName">clka</obj_property>
+   </wvobject>
+   <wvobject fp_name="/ANCDataMem_Tb/uut/DataRam/ena" type="logic" db_ref_id="1">
+      <obj_property name="ElementShortName">ena</obj_property>
+      <obj_property name="ObjectShortName">ena</obj_property>
+   </wvobject>
+   <wvobject fp_name="/ANCDataMem_Tb/uut/DataRam/wea" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">wea[0:0]</obj_property>
+      <obj_property name="ObjectShortName">wea[0:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/ANCDataMem_Tb/uut/DataRam/addra" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">addra[6:0]</obj_property>
+      <obj_property name="ObjectShortName">addra[6:0]</obj_property>
+      <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+   </wvobject>
+   <wvobject fp_name="/ANCDataMem_Tb/uut/DataRam/dina" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">dina[15:0]</obj_property>
+      <obj_property name="ObjectShortName">dina[15:0]</obj_property>
+      <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+   </wvobject>
+   <wvobject fp_name="/ANCDataMem_Tb/uut/DataRam/douta" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">douta[15:0]</obj_property>
+      <obj_property name="ObjectShortName">douta[15:0]</obj_property>
+      <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+   </wvobject>
+   <wvobject fp_name="/ANCDataMem_Tb/uut/RamShiftENOld" type="logic" db_ref_id="1">
+      <obj_property name="ElementShortName">RamShiftENOld</obj_property>
+      <obj_property name="ObjectShortName">RamShiftENOld</obj_property>
+   </wvobject>
+   <wvobject fp_name="/ANCDataMem_Tb/uut/Control" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">Control[7:0]</obj_property>
+      <obj_property name="ObjectShortName">Control[7:0]</obj_property>
+      <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+   </wvobject>
+   <wvobject fp_name="/ANCDataMem_Tb/uut/SPIData_reg" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">SPIData_reg[10:0]</obj_property>
+      <obj_property name="ObjectShortName">SPIData_reg[10:0]</obj_property>
+      <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+   </wvobject>
+</wave_config>

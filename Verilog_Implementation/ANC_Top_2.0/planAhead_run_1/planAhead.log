@@ -1,0 +1,118 @@
+#-----------------------------------------------------------
+# PlanAhead v14.1 (64-bit)
+# Build 179419 by xbuild on Thu Apr 26 11:43:29 MDT 2012
+# Start of session at: Wed Aug 08 20:03:30 2018
+# Process ID: 14816
+# Log file: X:/0_xlinx_ISE/ANC_Top_2.0/planAhead_run_1/planAhead.log
+# Journal file: X:/0_xlinx_ISE/ANC_Top_2.0/planAhead_run_1/planAhead.jou
+#-----------------------------------------------------------
+INFO: [Device-36] Loading parts and site information from C:/Xilinx/14.1/ISE_DS/PlanAhead/data/parts/arch.xml
+Parsing RTL primitives file [C:/Xilinx/14.1/ISE_DS/PlanAhead/data/parts/xilinx/rtl/prims/rtl_prims.xml]
+Finished parsing RTL primitives file [C:/Xilinx/14.1/ISE_DS/PlanAhead/data/parts/xilinx/rtl/prims/rtl_prims.xml]
+start_gui
+source X:/0_xlinx_ISE/ANC_Top_2.0/pa.fromNcd.tcl
+# create_project -name ANC_Top_2.0 -dir "X:/0_xlinx_ISE/ANC_Top_2.0/planAhead_run_1" -part xc6slx9csg324-2
+Parsing template File [C:/Xilinx/14.1/ISE_DS/ISE\data\projnav\templates\verilog.xml].
+Finished parsing template File [C:/Xilinx/14.1/ISE_DS/ISE\data\projnav\templates\verilog.xml].
+Parsing template File [C:/Xilinx/14.1/ISE_DS/ISE\data\projnav\templates\vhdl.xml].
+Finished parsing template File [C:/Xilinx/14.1/ISE_DS/ISE\data\projnav\templates\vhdl.xml].
+Parsing template File [C:/Xilinx/14.1/ISE_DS/ISE\data\projnav\templates\ucf.xml].
+Finished parsing template File [C:/Xilinx/14.1/ISE_DS/ISE\data\projnav\templates\ucf.xml].
+create_project: Time (s): elapsed = 00:00:05 . Memory (MB): peak = 347.895 ; gain = 73.883
+# set srcset [get_property srcset [current_run -impl]]
+# set_property design_mode GateLvl $srcset
+# set_property edif_top_file "X:/0_xlinx_ISE/ANC_Top_2.0/ANCTop_V.ngc" [ get_property srcset [ current_run ] ]
+# add_files -norecurse { {X:/0_xlinx_ISE/ANC_Top_2.0} {ipcore_dir} }
+# add_files [list {ipcore_dir/BlockRam.ncf}] -fileset [get_property constrset [current_run]]
+# set_property target_constrs_file "mimasv2_user_constraints_file.ucf" [current_fileset -constrset]
+Adding file 'X:\0_xlinx_ISE\ANC_Top_2.0\mimasv2_user_constraints_file.ucf' to fileset 'constrs_1'
+# add_files [list {mimasv2_user_constraints_file.ucf}] -fileset [get_property constrset [current_run]]
+# link_design
+Design is defaulting to srcset: sources_1
+Design is defaulting to constrset: constrs_1
+Design is defaulting to project part: xc6slx9csg324-2
+Release 14.1 - ngc2edif P.15xf (nt64)
+Copyright (c) 1995-2012 Xilinx, Inc.  All rights reserved.
+Reading design ANCTop_V.ngc ...
+WARNING:NetListWriters:298 - No output is written to ANCTop_V.xncf, ignored.
+Processing design ...
+   Preping design's networks ...
+   Preping design's macros ...
+  finished :Prep
+Writing EDIF netlist file ANCTop_V.edif ...
+ngc2edif: Total memory usage is 89572 kilobytes
+
+Parsing EDIF File [.\planAhead_run_1\ANC_Top_2.0.data\cache\ANCTop_V_ngc_ecef3c79.edif]
+Finished Parsing EDIF File [.\planAhead_run_1\ANC_Top_2.0.data\cache\ANCTop_V_ngc_ecef3c79.edif]
+Release 14.1 - ngc2edif P.15xf (nt64)
+Copyright (c) 1995-2012 Xilinx, Inc.  All rights reserved.
+Reading design BlockRam.ngc ...
+WARNING:NetListWriters:298 - No output is written to BlockRam.xncf, ignored.
+Processing design ...
+   Preping design's networks ...
+   Preping design's macros ...
+  finished :Prep
+Writing EDIF netlist file BlockRam.edif ...
+ngc2edif: Total memory usage is 77284 kilobytes
+
+Reading core file 'X:\0_xlinx_ISE\ANC_Top_2.0\ipcore_dir\BlockRam.ngc' for (cell view 'BlockRam', library 'ANCTop_V_lib', file 'ANCTop_V.ngc')
+Parsing EDIF File [.\planAhead_run_1\ANC_Top_2.0.data\cache\BlockRam_ngc_a27b3977.edif]
+Finished Parsing EDIF File [.\planAhead_run_1\ANC_Top_2.0.data\cache\BlockRam_ngc_a27b3977.edif]
+WARNING: [Netlist-43] Netlist 'ANCTop_V' is not ideal for floorplanning, since the cellview 'ANCTop_V' defined in file 'ANCTop_V.ngc' contains large number of primitives.  Please consider enabling hierarchy in synthesis if you want to do floorplanning.
+Loading clock regions from C:/Xilinx/14.1/ISE_DS/PlanAhead/data\parts/xilinx/spartan6/spartan6lx/xc6slx9/ClockRegion.xml
+Loading clock buffers from C:/Xilinx/14.1/ISE_DS/PlanAhead/data\parts/xilinx/spartan6/spartan6lx/xc6slx9/ClockBuffers.xml
+Loading package pin functions from C:/Xilinx/14.1/ISE_DS/PlanAhead/data\parts\xilinx\spartan6/PinFunctions.xml...
+Loading package from C:/Xilinx/14.1/ISE_DS/PlanAhead/data\parts/xilinx/spartan6/spartan6lx/xc6slx9/csg324/Package.xml
+Loading io standards from C:/Xilinx/14.1/ISE_DS/PlanAhead/data\./parts/xilinx/spartan6/IOStandards.xml
+Loading device configuration modes from C:/Xilinx/14.1/ISE_DS/PlanAhead/data\parts\xilinx\spartan6/ConfigModes.xml
+Loading list of drcs for the architecture : C:/Xilinx/14.1/ISE_DS/PlanAhead/data\./parts/xilinx/spartan6/drc.xml
+Parsing UCF File [X:\0_xlinx_ISE\ANC_Top_2.0\ipcore_dir\BlockRam.ncf]
+Finished Parsing UCF File [X:\0_xlinx_ISE\ANC_Top_2.0\ipcore_dir\BlockRam.ncf]
+Parsing UCF File [X:\0_xlinx_ISE\ANC_Top_2.0\ipcore_dir\BlockRam.ncf]
+Finished Parsing UCF File [X:\0_xlinx_ISE\ANC_Top_2.0\ipcore_dir\BlockRam.ncf]
+Parsing UCF File [X:\0_xlinx_ISE\ANC_Top_2.0\mimasv2_user_constraints_file.ucf]
+Finished Parsing UCF File [X:\0_xlinx_ISE\ANC_Top_2.0\mimasv2_user_constraints_file.ucf]
+INFO: [Project-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+INFO: [Project-176] Phase 0 Netlist Checksum: 271a102d 
+link_design: Time (s): elapsed = 00:00:19 . Memory (MB): peak = 526.828 ; gain = 178.766
+# read_xdl -file "X:/0_xlinx_ISE/ANC_Top_2.0/ANCTop_V.ncd"
+Release 14.1 - xdl P.15xf (nt64)
+Copyright (c) 1995-2012 Xilinx, Inc.  All rights reserved.
+
+WARNING:XDL:213 - The resulting xdl output will not have LUT equation strings or RAM INIT strings.
+Loading device for application Rf_Device from file '6slx9.nph' in environment C:\Xilinx\14.1\ISE_DS\ISE\.
+   "ANCTop_V" is an NCD, version 3.2, device xc6slx9, package csg324, speed -2
+Successfully converted design 'X:\0_xlinx_ISE\ANC_Top_2.0\ANCTop_V.ncd' to 'X:\0_xlinx_ISE\ANC_Top_2.0\ANCTop_V.xdl'.
+INFO: [Designutils-669] Parsing Placement File : X:\0_xlinx_ISE\ANC_Top_2.0\ANCTop_V.ncd
+INFO: [Designutils-658] Finished Parsing Placement File : X:\0_xlinx_ISE\ANC_Top_2.0\ANCTop_V.ncd
+INFO: [Designutils-671] Placed 2025 instances
+read_xdl: Time (s): elapsed = 00:00:08 . Memory (MB): peak = 564.316 ; gain = 37.488
+# if {[catch {read_twx -name results_1 -file "X:/0_xlinx_ISE/ANC_Top_2.0/ANCTop_V.twx"} eInfo]} {
+#    puts "WARNING: there was a problem importing \"X:/0_xlinx_ISE/ANC_Top_2.0/ANCTop_V.twx\": $eInfo"
+# }
+INFO: [Timing-71] No path element with name FilterBlock/FilterMul/ADDERTREE_INTERNAL_Madd_41_rt found. It will be ignored.
+INFO: [Timing-71] No path element with name FilterBlock/FilterMul/ADDERTREE_INTERNAL_Madd_73_rt found. It will be ignored.
+INFO: [Timing-71] No path element with name FilterBlock/FilterMul/ADDERTREE_INTERNAL_Madd_41_rt found. It will be ignored.
+INFO: [Timing-71] No path element with name FilterBlock/FilterMul/ADDERTREE_INTERNAL_Madd_73_rt found. It will be ignored.
+INFO: [Timing-71] No path element with name FilterBlock/FilterMul/ADDERTREE_INTERNAL_Madd_41_rt found. It will be ignored.
+INFO: [Timing-71] No path element with name FilterBlock/FilterMul/ADDERTREE_INTERNAL_Madd_73_rt found. It will be ignored.
+INFO: [Timing-71] No path element with name FilterBlock/FilterMul/ADDERTREE_INTERNAL_Madd_41_rt found. It will be ignored.
+INFO: [Timing-71] No path element with name FilterBlock/FilterMul/ADDERTREE_INTERNAL_Madd_73_rt found. It will be ignored.
+INFO: [Timing-71] No path element with name FilterBlock/FilterAdd/addtemp<19>_rt found. It will be ignored.
+INFO: [Timing-71] No path element with name FilterBlock/FilterMul/ADDERTREE_INTERNAL_Madd_155_rt found. It will be ignored.
+INFO: [Timing-71] No path element with name FilterBlock/FilterMul/ADDERTREE_INTERNAL_Madd_177_rt found. It will be ignored.
+INFO: [Timing-71] No path element with name FilterBlock/FilterAdd/addtemp<19>_rt found. It will be ignored.
+INFO: [Timing-71] No path element with name FilterBlock/FilterMul/ADDERTREE_INTERNAL_Madd_155_rt found. It will be ignored.
+INFO: [Timing-71] No path element with name FilterBlock/FilterMul/ADDERTREE_INTERNAL_Madd_177_rt found. It will be ignored.
+INFO: [Timing-71] No path element with name FilterBlock/FilterAdd/addtemp<19>_rt found. It will be ignored.
+INFO: [Timing-71] No path element with name FilterBlock/FilterMul/ADDERTREE_INTERNAL_Madd_41_rt found. It will be ignored.
+INFO: [Timing-71] No path element with name FilterBlock/FilterMul/ADDERTREE_INTERNAL_Madd_73_rt found. It will be ignored.
+INFO: [Timing-71] No path element with name FilterBlock/FilterMul/ADDERTREE_INTERNAL_Madd_41_rt found. It will be ignored.
+INFO: [Timing-71] No path element with name FilterBlock/FilterMul/ADDERTREE_INTERNAL_Madd_73_rt found. It will be ignored.
+INFO: [Timing-71] No path element with name FilterBlock/FilterMul/ADDERTREE_INTERNAL_Madd_41_rt found. It will be ignored.
+INFO: [Timing-71] No path element with name FilterBlock/FilterMul/ADDERTREE_INTERNAL_Madd_63_rt found. It will be ignored.
+exit
+INFO: [Common-206] Exiting PlanAhead...
+INFO: [Common-83] Releasing license: PlanAhead

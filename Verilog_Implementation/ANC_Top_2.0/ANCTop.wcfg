@@ -1,0 +1,150 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<wave_config>
+   <wave_state>
+   </wave_state>
+   <db_ref_list>
+      <db_ref path="X:/0_xlinx_ISE/ANC_Top_2.0/ANCTop_Tb_isim_beh.wdb" id="1" type="auto">
+         <top_modules>
+            <top_module name="ANCTop_Tb" />
+            <top_module name="glbl" />
+         </top_modules>
+      </db_ref>
+   </db_ref_list>
+   <WVObjectSize size="22" />
+   <wvobject fp_name="/ANCTop_Tb/AudioR" type="logic" db_ref_id="1">
+      <obj_property name="ElementShortName">AudioR</obj_property>
+      <obj_property name="ObjectShortName">AudioR</obj_property>
+   </wvobject>
+   <wvobject fp_name="/ANCTop_Tb/Clk_100M" type="logic" db_ref_id="1">
+      <obj_property name="ElementShortName">Clk_100M</obj_property>
+      <obj_property name="ObjectShortName">Clk_100M</obj_property>
+   </wvobject>
+   <wvobject fp_name="/ANCTop_Tb/SSPIF" type="logic" db_ref_id="1">
+      <obj_property name="ElementShortName">SSPIF</obj_property>
+      <obj_property name="ObjectShortName">SSPIF</obj_property>
+   </wvobject>
+   <wvobject fp_name="/ANCTop_Tb/SPIData" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">SPIData[10:0]</obj_property>
+      <obj_property name="ObjectShortName">SPIData[10:0]</obj_property>
+      <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+   </wvobject>
+   <wvobject fp_name="/ANCTop_Tb/uut/RamShiftEN" type="logic" db_ref_id="1">
+      <obj_property name="ElementShortName">RamShiftEN</obj_property>
+      <obj_property name="ObjectShortName">RamShiftEN</obj_property>
+   </wvobject>
+   <wvobject fp_name="/ANCTop_Tb/uut/FilterEN" type="logic" db_ref_id="1">
+      <obj_property name="ElementShortName">FilterEN</obj_property>
+      <obj_property name="ObjectShortName">FilterEN</obj_property>
+   </wvobject>
+   <wvobject fp_name="/ANCTop_Tb/FiltoutSig" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">FiltoutSig[10:0]</obj_property>
+      <obj_property name="ObjectShortName">FiltoutSig[10:0]</obj_property>
+      <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+   </wvobject>
+   <wvobject fp_name="/ANCTop_Tb/uut/Err" type="array" db_ref_id="1">
+      <obj_property name="DisplayName">label</obj_property>
+      <obj_property name="ElementShortName">Err[10:0]</obj_property>
+      <obj_property name="ObjectShortName">Err[10:0]</obj_property>
+      <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+      <obj_property name="label">Err[10:0]</obj_property>
+      <obj_property name="UseCustomSignalColor">true</obj_property>
+      <obj_property name="CustomSignalColor">#800000</obj_property>
+   </wvobject>
+   <wvobject fp_name="/ANCTop_Tb/uut/FilterBlock/Wz_In" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">Wz_In[10:0]</obj_property>
+      <obj_property name="ObjectShortName">Wz_In[10:0]</obj_property>
+      <obj_property name="UseCustomSignalColor">true</obj_property>
+      <obj_property name="CustomSignalColor">#00ffff</obj_property>
+      <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+   </wvobject>
+   <wvobject fp_name="/ANCTop_Tb/uut/FilterBlock/Sig_In" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">Sig_In[10:0]</obj_property>
+      <obj_property name="ObjectShortName">Sig_In[10:0]</obj_property>
+      <obj_property name="UseCustomSignalColor">true</obj_property>
+      <obj_property name="CustomSignalColor">#00ffff</obj_property>
+      <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+   </wvobject>
+   <wvobject fp_name="/ANCTop_Tb/uut/FilterBlock/FiltN_MulResult" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">FiltN_MulResult[20:0]</obj_property>
+      <obj_property name="ObjectShortName">FiltN_MulResult[20:0]</obj_property>
+      <obj_property name="UseCustomSignalColor">true</obj_property>
+      <obj_property name="CustomSignalColor">#00ffff</obj_property>
+      <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+   </wvobject>
+   <wvobject fp_name="/ANCTop_Tb/uut/FilterBlock/FiltSum_AddResult" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">FiltSum_AddResult[20:0]</obj_property>
+      <obj_property name="ObjectShortName">FiltSum_AddResult[20:0]</obj_property>
+      <obj_property name="UseCustomSignalColor">true</obj_property>
+      <obj_property name="CustomSignalColor">#00ffff</obj_property>
+      <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+   </wvobject>
+   <wvobject fp_name="/ANCTop_Tb/uut/FilterBlock/FiltNResult" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">FiltNResult[20:0]</obj_property>
+      <obj_property name="ObjectShortName">FiltNResult[20:0]</obj_property>
+      <obj_property name="UseCustomSignalColor">true</obj_property>
+      <obj_property name="CustomSignalColor">#00ffff</obj_property>
+      <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+   </wvobject>
+   <wvobject fp_name="/ANCTop_Tb/uut/Synch" type="logic" db_ref_id="1">
+      <obj_property name="DisplayName">label</obj_property>
+      <obj_property name="ElementShortName">Synch</obj_property>
+      <obj_property name="ObjectShortName">Synch</obj_property>
+      <obj_property name="label">Synch</obj_property>
+   </wvobject>
+   <wvobject fp_name="/ANCTop_Tb/uut/DataMemBlock/Data_addra" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">Data_addra[6:0]</obj_property>
+      <obj_property name="ObjectShortName">Data_addra[6:0]</obj_property>
+      <obj_property name="UseCustomSignalColor">true</obj_property>
+      <obj_property name="CustomSignalColor">#ffff00</obj_property>
+      <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+   </wvobject>
+   <wvobject fp_name="/ANCTop_Tb/uut/DataMemBlock/Data_dina" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">Data_dina[15:0]</obj_property>
+      <obj_property name="ObjectShortName">Data_dina[15:0]</obj_property>
+      <obj_property name="UseCustomSignalColor">true</obj_property>
+      <obj_property name="CustomSignalColor">#ffff00</obj_property>
+      <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+   </wvobject>
+   <wvobject fp_name="/ANCTop_Tb/uut/DataMemBlock/Data_douta" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">Data_douta[15:0]</obj_property>
+      <obj_property name="ObjectShortName">Data_douta[15:0]</obj_property>
+      <obj_property name="UseCustomSignalColor">true</obj_property>
+      <obj_property name="CustomSignalColor">#ffff00</obj_property>
+      <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+   </wvobject>
+   <wvobject fp_name="/ANCTop_Tb/uut/DataMemBlock/Control" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">Control[7:0]</obj_property>
+      <obj_property name="ObjectShortName">Control[7:0]</obj_property>
+      <obj_property name="UseCustomSignalColor">true</obj_property>
+      <obj_property name="CustomSignalColor">#ffff00</obj_property>
+      <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+   </wvobject>
+   <wvobject fp_name="/ANCTop_Tb/uut/CoefMemBlock/Data_addra" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">Data_addra[6:0]</obj_property>
+      <obj_property name="ObjectShortName">Data_addra[6:0]</obj_property>
+      <obj_property name="UseCustomSignalColor">true</obj_property>
+      <obj_property name="CustomSignalColor">#ff00ff</obj_property>
+      <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+   </wvobject>
+   <wvobject fp_name="/ANCTop_Tb/uut/CoefMemBlock/Data_din" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">Data_din[15:0]</obj_property>
+      <obj_property name="ObjectShortName">Data_din[15:0]</obj_property>
+      <obj_property name="UseCustomSignalColor">true</obj_property>
+      <obj_property name="CustomSignalColor">#ff00ff</obj_property>
+      <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+   </wvobject>
+   <wvobject fp_name="/ANCTop_Tb/uut/CoefMemBlock/Data_douta" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">Data_douta[15:0]</obj_property>
+      <obj_property name="ObjectShortName">Data_douta[15:0]</obj_property>
+      <obj_property name="UseCustomSignalColor">true</obj_property>
+      <obj_property name="CustomSignalColor">#ff00ff</obj_property>
+      <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+   </wvobject>
+   <wvobject fp_name="/ANCTop_Tb/uut/CoefMemBlock/CoefControl" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">CoefControl[7:0]</obj_property>
+      <obj_property name="ObjectShortName">CoefControl[7:0]</obj_property>
+      <obj_property name="UseCustomSignalColor">true</obj_property>
+      <obj_property name="CustomSignalColor">#ff00ff</obj_property>
+      <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+   </wvobject>
+</wave_config>

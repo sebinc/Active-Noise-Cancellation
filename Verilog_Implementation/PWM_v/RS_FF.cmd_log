@@ -1,0 +1,1 @@
+vhdtdtfi -lang verilog -prj PWM_v -o X:/0_xlinx_ISE/PWM_v/RS_FF.tfi -lib work X:/0_xlinx_ISE/PWM_v//RS_FF.v -module RS_FF -template C:/Xilinx/14.1/ISE_DS/ISE//data/tfi.tft -deleteonerror 

@@ -1,0 +1,167 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--This is an ISE project configuration file.-->
+<!--It holds project specific layout data for the projectmgr plugin.-->
+<!--Copyright (c) 1995-2009 Xilinx, Inc.  All rights reserved.-->
+<Project version="2" owner="projectmgr" name="ANC_Top_2.0" >
+   <!--This is an ISE project configuration file.-->
+   <ItemView engineview="SynthesisOnly" guiview="Source" compilemode="AutoCompile" >
+      <ClosedNodes>
+         <ClosedNodesVersion>2</ClosedNodesVersion>
+         <ClosedNode>/ANCAdapt_V X:|0_xlinx_ISE|ANC_Top_2.0|ANCAdapt_V.v</ClosedNode>
+         <ClosedNode>/ANCCoefMem_V X:|0_xlinx_ISE|ANC_Top_2.0|ANCCoefMem_V.v</ClosedNode>
+         <ClosedNode>/ANCDataMem_V X:|0_xlinx_ISE|ANC_Top_2.0|ANCDataMem_V.v</ClosedNode>
+         <ClosedNode>/ANCFilter_V X:|0_xlinx_ISE|ANC_Top_2.0|ANCFilter_V.v</ClosedNode>
+         <ClosedNode>/ANCSaturation_V X:|0_xlinx_ISE|ANC_Top_2.0|ANCSaturation_V.v</ClosedNode>
+         <ClosedNode>/ANCTop_V X:|0_xlinx_ISE|ANC_Top_2.0|ANCTop_V.v/AdaptBlock - ANCAdapt_V</ClosedNode>
+         <ClosedNode>/ANCTop_V X:|0_xlinx_ISE|ANC_Top_2.0|ANCTop_V.v/CoefMemBlock - ANCCoefMem_V</ClosedNode>
+         <ClosedNode>/ANCTop_V X:|0_xlinx_ISE|ANC_Top_2.0|ANCTop_V.v/DataMemBlock - ANCDataMem_V</ClosedNode>
+         <ClosedNode>/ANCTop_V X:|0_xlinx_ISE|ANC_Top_2.0|ANCTop_V.v/FilterBlock - ANCFilter_V</ClosedNode>
+         <ClosedNode>/ANCTop_V X:|0_xlinx_ISE|ANC_Top_2.0|ANCTop_V.v/SaturationBlock - ANCSaturation_V</ClosedNode>
+         <ClosedNode>/ANCTop_V X:|0_xlinx_ISE|ANC_Top_2.0|ANCTop_V.v/uut1 - ANCDataMem_V</ClosedNode>
+         <ClosedNode>/ANCTop_V X:|0_xlinx_ISE|ANC_Top_2.0|ANCTop_V.v/uut2 - ANCCoefMem_V</ClosedNode>
+         <ClosedNode>/ANCTop_V X:|0_xlinx_ISE|ANC_Top_2.0|ANCTop_V.v/uut3 - ANCAdapt_V</ClosedNode>
+         <ClosedNode>/ANCTop_V X:|0_xlinx_ISE|ANC_Top_2.0|ANCTop_V.v/uut4 - ANCFilter_V</ClosedNode>
+         <ClosedNode>/ANCTop_V X:|0_xlinx_ISE|ANC_Top_2.0|ANCTop_V.v/uut5 - ANCSaturation_V</ClosedNode>
+         <ClosedNode>/PWM_v X:|0_xlinx_ISE|ANC_Top_2.0|PWM_v.v</ClosedNode>
+      </ClosedNodes>
+      <SelectedItems>
+         <SelectedItem>ANCTop_V (X:/0_xlinx_ISE/ANC_Top_2.0/ANCTop_V.v)</SelectedItem>
+      </SelectedItems>
+      <ScrollbarPosition orientation="vertical" >1</ScrollbarPosition>
+      <ScrollbarPosition orientation="horizontal" >0</ScrollbarPosition>
+      <ViewHeaderState orientation="horizontal" >000000ff0000000000000001000000010000000000000000000000000000000002020000000100000001000000640000017e000000020000000000000000000000000200000064ffffffff0000008100000003000000020000017e0000000100000003000000000000000100000003</ViewHeaderState>
+      <UserChangedColumnWidths orientation="horizontal" >true</UserChangedColumnWidths>
+      <CurrentItem>ANCTop_V (X:/0_xlinx_ISE/ANC_Top_2.0/ANCTop_V.v)</CurrentItem>
+   </ItemView>
+   <ItemView engineview="SynthesisOnly" sourcetype="" guiview="Process" >
+      <ClosedNodes>
+         <ClosedNodesVersion>1</ClosedNodesVersion>
+         <ClosedNode>Design Utilities/Compile HDL Simulation Libraries</ClosedNode>
+      </ClosedNodes>
+      <SelectedItems>
+         <SelectedItem></SelectedItem>
+      </SelectedItems>
+      <ScrollbarPosition orientation="vertical" >0</ScrollbarPosition>
+      <ScrollbarPosition orientation="horizontal" >0</ScrollbarPosition>
+      <ViewHeaderState orientation="horizontal" >000000ff0000000000000001000000010000000000000000000000000000000000000000000000013f000000010000000100000000000000000000000064ffffffff0000008100000000000000010000013f0000000100000000</ViewHeaderState>
+      <UserChangedColumnWidths orientation="horizontal" >false</UserChangedColumnWidths>
+      <CurrentItem></CurrentItem>
+   </ItemView>
+   <ItemView guiview="File" >
+      <ClosedNodes>
+         <ClosedNodesVersion>1</ClosedNodesVersion>
+      </ClosedNodes>
+      <SelectedItems/>
+      <ScrollbarPosition orientation="vertical" >0</ScrollbarPosition>
+      <ScrollbarPosition orientation="horizontal" >0</ScrollbarPosition>
+      <ViewHeaderState orientation="horizontal" >000000ff0000000000000001000000000000000001000000000000000000000000000000000000027d000000040101000100000000000000000000000064ffffffff000000810000000000000004000000420000000100000000000000240000000100000000000000660000000100000000000001b10000000100000000</ViewHeaderState>
+      <UserChangedColumnWidths orientation="horizontal" >false</UserChangedColumnWidths>
+      <CurrentItem>BlockRam.xco</CurrentItem>
+   </ItemView>
+   <ItemView guiview="Library" >
+      <ClosedNodes>
+         <ClosedNodesVersion>1</ClosedNodesVersion>
+         <ClosedNode>work</ClosedNode>
+      </ClosedNodes>
+      <SelectedItems/>
+      <ScrollbarPosition orientation="vertical" >0</ScrollbarPosition>
+      <ScrollbarPosition orientation="horizontal" >0</ScrollbarPosition>
+      <ViewHeaderState orientation="horizontal" >000000ff00000000000000010000000000000000010000000000000000000000000000000000000109000000010001000100000000000000000000000064ffffffff000000810000000000000001000001090000000100000000</ViewHeaderState>
+      <UserChangedColumnWidths orientation="horizontal" >false</UserChangedColumnWidths>
+      <CurrentItem>work</CurrentItem>
+   </ItemView>
+   <ItemView engineview="SynthesisOnly" sourcetype="DESUT_XCO" guiview="Process" >
+      <ClosedNodes>
+         <ClosedNodesVersion>1</ClosedNodesVersion>
+      </ClosedNodes>
+      <SelectedItems>
+         <SelectedItem>View HDL Instantiation Template</SelectedItem>
+      </SelectedItems>
+      <ScrollbarPosition orientation="vertical" >0</ScrollbarPosition>
+      <ScrollbarPosition orientation="horizontal" >0</ScrollbarPosition>
+      <ViewHeaderState orientation="horizontal" >000000ff0000000000000001000000010000000000000000000000000000000000000000000000013f000000010000000100000000000000000000000064ffffffff0000008100000000000000010000013f0000000100000000</ViewHeaderState>
+      <UserChangedColumnWidths orientation="horizontal" >false</UserChangedColumnWidths>
+      <CurrentItem>View HDL Instantiation Template</CurrentItem>
+   </ItemView>
+   <ItemView engineview="SynthesisOnly" sourcetype="DESUT_VERILOG" guiview="Process" >
+      <ClosedNodes>
+         <ClosedNodesVersion>1</ClosedNodesVersion>
+         <ClosedNode>Configure Target Device</ClosedNode>
+         <ClosedNode>Design Utilities/Compile HDL Simulation Libraries</ClosedNode>
+         <ClosedNode>Implement Design</ClosedNode>
+         <ClosedNode>User Constraints</ClosedNode>
+      </ClosedNodes>
+      <SelectedItems>
+         <SelectedItem>Design Summary/Reports</SelectedItem>
+      </SelectedItems>
+      <ScrollbarPosition orientation="vertical" >0</ScrollbarPosition>
+      <ScrollbarPosition orientation="horizontal" >0</ScrollbarPosition>
+      <ViewHeaderState orientation="horizontal" >000000ff0000000000000001000000010000000000000000000000000000000000000000000000012e000000010000000100000000000000000000000064ffffffff0000008100000000000000010000012e0000000100000000</ViewHeaderState>
+      <UserChangedColumnWidths orientation="horizontal" >false</UserChangedColumnWidths>
+      <CurrentItem>Design Summary/Reports</CurrentItem>
+   </ItemView>
+   <ItemView engineview="BehavioralSim" guiview="Source" compilemode="AutoCompile" >
+      <ClosedNodes>
+         <ClosedNodesVersion>2</ClosedNodesVersion>
+         <ClosedNode>/ANCAdapt_Tb X:|0_xlinx_ISE|ANC_Top_2.0|ANCAdapt_Tb.v</ClosedNode>
+         <ClosedNode>/ANCAdapt_V X:|0_xlinx_ISE|ANC_Top_2.0|ANCAdapt_V.v</ClosedNode>
+         <ClosedNode>/ANCCoefMem_Tb X:|0_xlinx_ISE|ANC_Top_2.0|ANCCoefMem_Tb.v</ClosedNode>
+         <ClosedNode>/ANCCoefMem_V X:|0_xlinx_ISE|ANC_Top_2.0|ANCCoefMem_V.v</ClosedNode>
+         <ClosedNode>/ANCControl_Tb X:|0_xlinx_ISE|ANC_Top_2.0|ANCControl_Tb.v</ClosedNode>
+         <ClosedNode>/ANCDataMem_Tb X:|0_xlinx_ISE|ANC_Top_2.0|ANCDataMem_Tb.v</ClosedNode>
+         <ClosedNode>/ANCFilter_Tb X:|0_xlinx_ISE|ANC_Top_2.0|ANCFilter_Tb.v</ClosedNode>
+         <ClosedNode>/ANCSaturation_Tb X:|0_xlinx_ISE|ANC_Top_2.0|ANCSaturation_Tb.v</ClosedNode>
+         <ClosedNode>/ANCSaturation_V X:|0_xlinx_ISE|ANC_Top_2.0|ANCSaturation_V.v</ClosedNode>
+         <ClosedNode>/ANCTop_Tb X:|0_xlinx_ISE|ANC_Top_2.0|ANCTop_Tb.v</ClosedNode>
+         <ClosedNode>/ANCTop_Tb X:|0_xlinx_ISE|ANC_Top_2.0|ANCTop_Tb.v/uut - ANCTop_V/CoefMemBlock - ANCCoefMem_V</ClosedNode>
+         <ClosedNode>/ANCTop_Tb X:|0_xlinx_ISE|ANC_Top_2.0|ANCTop_Tb.v/uut - ANCTop_V/DataMemBlock - ANCDataMem_V</ClosedNode>
+         <ClosedNode>/ANCTop_Tb X:|0_xlinx_ISE|ANC_Top_2.0|ANCTop_Tb.v/uut - ANCTop_V/FilterBlock - ANCFilter_V</ClosedNode>
+         <ClosedNode>/ANCTop_Tb X:|0_xlinx_ISE|ANC_Top_2.0|ANCTop_Tb.v/uut - ANCTop_V/PWMBlock - PWM_v</ClosedNode>
+         <ClosedNode>/ANCTop_Tb X:|0_xlinx_ISE|ANC_Top_2.0|ANCTop_Tb.v/uut - ANCTop_V/SaturationBlock - ANCSaturation_V</ClosedNode>
+         <ClosedNode>/ANCTop_Tb X:|0_xlinx_ISE|ANC_Top_2.0|ANCTop_Tb.v/uut - ANCTop_V/uut1 - ANCDataMem_V</ClosedNode>
+         <ClosedNode>/ANCTop_Tb X:|0_xlinx_ISE|ANC_Top_2.0|ANCTop_Tb.v/uut - ANCTop_V/uut2 - ANCCoefMem_V</ClosedNode>
+         <ClosedNode>/ANCTop_Tb X:|0_xlinx_ISE|ANC_Top_2.0|ANCTop_Tb.v/uut - ANCTop_V/uut3 - ANCAdapt_V</ClosedNode>
+         <ClosedNode>/ANCTop_Tb X:|0_xlinx_ISE|ANC_Top_2.0|ANCTop_Tb.v/uut - ANCTop_V/uut4 - ANCFilter_V</ClosedNode>
+         <ClosedNode>/ANCTop_Tb X:|0_xlinx_ISE|ANC_Top_2.0|ANCTop_Tb.v/uut - ANCTop_V/uut5 - ANCSaturation_V</ClosedNode>
+         <ClosedNode>/ANCTop_V X:|0_xlinx_ISE|ANC_Top_2.0|ANCTop_V.v</ClosedNode>
+         <ClosedNode>/SignedAdder_Tb X:|0_xlinx_ISE|ANC_Top_2.0|SignedAdder_Tb.v</ClosedNode>
+      </ClosedNodes>
+      <SelectedItems>
+         <SelectedItem>ANCTop_Tb (X:/0_xlinx_ISE/ANC_Top_2.0/ANCTop_Tb.v)</SelectedItem>
+      </SelectedItems>
+      <ScrollbarPosition orientation="vertical" >1</ScrollbarPosition>
+      <ScrollbarPosition orientation="horizontal" >0</ScrollbarPosition>
+      <ViewHeaderState orientation="horizontal" >000000ff0000000000000001000000010000000000000000000000000000000002020000000100000001000000640000011c000000020000000000000000000000000200000064ffffffff0000008100000003000000020000011c0000000100000003000000000000000100000003</ViewHeaderState>
+      <UserChangedColumnWidths orientation="horizontal" >true</UserChangedColumnWidths>
+      <CurrentItem>ANCTop_Tb (X:/0_xlinx_ISE/ANC_Top_2.0/ANCTop_Tb.v)</CurrentItem>
+   </ItemView>
+   <ItemView engineview="BehavioralSim" sourcetype="" guiview="Process" >
+      <ClosedNodes>
+         <ClosedNodesVersion>1</ClosedNodesVersion>
+         <ClosedNode>Design Utilities</ClosedNode>
+      </ClosedNodes>
+      <SelectedItems>
+         <SelectedItem></SelectedItem>
+      </SelectedItems>
+      <ScrollbarPosition orientation="vertical" >0</ScrollbarPosition>
+      <ScrollbarPosition orientation="horizontal" >0</ScrollbarPosition>
+      <ViewHeaderState orientation="horizontal" >000000ff0000000000000001000000010000000000000000000000000000000000000000000000013f000000010000000100000000000000000000000064ffffffff0000008100000000000000010000013f0000000100000000</ViewHeaderState>
+      <UserChangedColumnWidths orientation="horizontal" >false</UserChangedColumnWidths>
+      <CurrentItem></CurrentItem>
+   </ItemView>
+   <ItemView engineview="BehavioralSim" sourcetype="DESUT_VERILOG" guiview="Process" >
+      <ClosedNodes>
+         <ClosedNodesVersion>1</ClosedNodesVersion>
+      </ClosedNodes>
+      <SelectedItems>
+         <SelectedItem></SelectedItem>
+      </SelectedItems>
+      <ScrollbarPosition orientation="vertical" >0</ScrollbarPosition>
+      <ScrollbarPosition orientation="horizontal" >0</ScrollbarPosition>
+      <ViewHeaderState orientation="horizontal" >000000ff0000000000000001000000010000000000000000000000000000000000000000000000013f000000010000000100000000000000000000000064ffffffff0000008100000000000000010000013f0000000100000000</ViewHeaderState>
+      <UserChangedColumnWidths orientation="horizontal" >false</UserChangedColumnWidths>
+      <CurrentItem></CurrentItem>
+   </ItemView>
+   <SourceProcessView>000000ff00000000000000020000011b0000011b01000000050100000002</SourceProcessView>
+   <CurrentView>Implementation</CurrentView>
+</Project>

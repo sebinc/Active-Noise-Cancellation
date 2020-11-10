@@ -1,0 +1,4 @@
+verilog work "ipcore_dir/BlockRAM.v"
+verilog work "ram_top.v"
+verilog work "Ram_test.v"
+verilog work "C:/Xilinx/14.1/ISE_DS/ISE//verilog/src/glbl.v"

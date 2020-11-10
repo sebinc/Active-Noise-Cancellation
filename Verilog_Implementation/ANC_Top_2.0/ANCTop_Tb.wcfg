@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<wave_config>
+   <wave_state>
+   </wave_state>
+   <db_ref_list>
+      <db_ref path="X:/0_xlinx_ISE/ANC_Top_2.0/ANCTop_Tb_isim_beh.wdb" id="1" type="auto">
+         <top_modules>
+            <top_module name="ANCTop_Tb" />
+            <top_module name="glbl" />
+         </top_modules>
+      </db_ref>
+   </db_ref_list>
+   <WVObjectSize size="10" />
+   <wvobject fp_name="/ANCTop_Tb/Clk_100M" type="logic" db_ref_id="1">
+      <obj_property name="ElementShortName">Clk_100M</obj_property>
+      <obj_property name="ObjectShortName">Clk_100M</obj_property>
+   </wvobject>
+   <wvobject fp_name="/ANCTop_Tb/SPIData" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">SPIData[10:0]</obj_property>
+      <obj_property name="ObjectShortName">SPIData[10:0]</obj_property>
+      <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+   </wvobject>
+   <wvobject fp_name="/ANCTop_Tb/Reset" type="logic" db_ref_id="1">
+      <obj_property name="ElementShortName">Reset</obj_property>
+      <obj_property name="ObjectShortName">Reset</obj_property>
+   </wvobject>
+   <wvobject fp_name="/ANCTop_Tb/FilterEN" type="logic" db_ref_id="1">
+      <obj_property name="ElementShortName">FilterEN</obj_property>
+      <obj_property name="ObjectShortName">FilterEN</obj_property>
+   </wvobject>
+   <wvobject fp_name="/ANCTop_Tb/RamShiftEN" type="logic" db_ref_id="1">
+      <obj_property name="ElementShortName">RamShiftEN</obj_property>
+      <obj_property name="ObjectShortName">RamShiftEN</obj_property>
+   </wvobject>
+   <wvobject fp_name="/ANCTop_Tb/Err" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">Err[10:0]</obj_property>
+      <obj_property name="ObjectShortName">Err[10:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/ANCTop_Tb/uut/WzIn" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">WzIn[10:0]</obj_property>
+      <obj_property name="ObjectShortName">WzIn[10:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/ANCTop_Tb/uut/WzOut" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">WzOut[10:0]</obj_property>
+      <obj_property name="ObjectShortName">WzOut[10:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/ANCTop_Tb/uut/SigIn" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">SigIn[10:0]</obj_property>
+      <obj_property name="ObjectShortName">SigIn[10:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/ANCTop_Tb/uut/uut1/Control" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">Control[7:0]</obj_property>
+      <obj_property name="ObjectShortName">Control[7:0]</obj_property>
+      <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+   </wvobject>
+</wave_config>

@@ -1,0 +1,3 @@
+verilog work "Multiplier.v"
+verilog work "Multiplier_tb.v"
+verilog work "C:/Xilinx/14.1/ISE_DS/ISE//verilog/src/glbl.v"

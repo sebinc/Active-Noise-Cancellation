@@ -1,0 +1,28 @@
+Command line:
+   ANCTop_Tb_isim_beh.exe
+     -simmode  gui
+     -simrunnum  0
+     -socket  51272
+
+Thu Aug 09 23:07:19 2018
+
+
+ Elaboration Time: 0.0625 sec
+
+ Current Memory Usage: 517.3 Meg
+
+ Total Signals          : 515
+ Total Nets             : 2228
+ Total Signal Drivers   : 255
+ Total Blocks           : 54
+ Total Primitive Blocks : 40
+ Total Processes        : 312
+ Total Traceable Variables  : 689
+ Total Scalar Nets and Variables : 41907
+
+ Total Simulation Time: 0.203125 sec
+
+ Current Memory Usage: 360.006 Meg
+
+Thu Aug 09 23:52:15 2018
+

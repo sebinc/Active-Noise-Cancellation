@@ -1,0 +1,11 @@
+#-----------------------------------------------------------
+# PlanAhead v14.1 (64-bit)
+# Build 179419 by xbuild on Thu Apr 26 11:43:29 MDT 2012
+# Start of session at: Wed Aug 08 20:03:30 2018
+# Process ID: 14816
+# Log file: X:/0_xlinx_ISE/ANC_Top_2.0/planAhead_run_1/planAhead.log
+# Journal file: X:/0_xlinx_ISE/ANC_Top_2.0/planAhead_run_1/planAhead.jou
+#-----------------------------------------------------------
+start_gui
+source X:/0_xlinx_ISE/ANC_Top_2.0/pa.fromNcd.tcl
+exit

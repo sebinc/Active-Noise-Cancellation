@@ -1,0 +1,11 @@
+
+
+
+// Instantiate the module
+PWM_v instance_name (
+    .Clk_pwm(Clk_pwm), 
+    .PwmSig(PwmSig), 
+    .SigVec(SigVec)
+    );
+
+

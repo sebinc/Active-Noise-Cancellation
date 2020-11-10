@@ -1,0 +1,12 @@
+
+
+
+// Instantiate the module
+RS_FF instance_name (
+    .R(R), 
+    .S(S), 
+    .Clk(Clk), 
+    .Q(Q)
+    );
+
+

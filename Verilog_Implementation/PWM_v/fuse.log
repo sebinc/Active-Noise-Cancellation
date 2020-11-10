@@ -1,0 +1,23 @@
+Running: fuse.exe -relaunch -intstyle "ise" -incremental -lib "unisims_ver" -lib "unimacro_ver" -lib "xilinxcorelib_ver" -lib "secureip" -o "X:/0_xlinx_ISE/PWM_v/PWM_tb_isim_beh.exe" -prj "X:/0_xlinx_ISE/PWM_v/PWM_tb_beh.prj" "work.PWM_tb" "work.glbl" 
+ISim P.15xf (signature 0xc3576ebc)
+Number of CPUs detected in this system: 4
+Turning on mult-threading, number of parallel sub-compilation jobs: 8 
+Determining compilation order of HDL files
+Analyzing Verilog file "X:/0_xlinx_ISE/PWM_v/Signal_compare.v" into library work
+Analyzing Verilog file "X:/0_xlinx_ISE/PWM_v/RS_FF.v" into library work
+Analyzing Verilog file "X:/0_xlinx_ISE/PWM_v/PWM_v.v" into library work
+Analyzing Verilog file "X:/0_xlinx_ISE/PWM_v/PWM_tb.v" into library work
+Analyzing Verilog file "C:/Xilinx/14.1/ISE_DS/ISE//verilog/src/glbl.v" into library work
+Starting static elaboration
+Completed static elaboration
+Compiling module Signal_compare
+Compiling module RS_FF
+Compiling module PWM_v
+Compiling module PWM_tb
+Compiling module glbl
+Time Resolution for simulation is 1ps.
+Waiting for 1 sub-compilation(s) to finish...
+Compiled 5 Verilog Units
+Built simulation executable X:/0_xlinx_ISE/PWM_v/PWM_tb_isim_beh.exe
+Fuse Memory Usage: 25656 KB
+Fuse CPU Usage: 468 ms

@@ -1,0 +1,52 @@
+Running: fuse.exe -relaunch -intstyle "ise" -incremental -lib "unisims_ver" -lib "unimacro_ver" -lib "xilinxcorelib_ver" -lib "secureip" -o "X:/0_xlinx_ISE/ANC_Top_2.0/ANCTop_Tb_isim_beh.exe" -prj "X:/0_xlinx_ISE/ANC_Top_2.0/ANCTop_Tb_beh.prj" "work.ANCTop_Tb" "work.glbl" 
+ISim P.15xf (signature 0xc3576ebc)
+Number of CPUs detected in this system: 4
+Turning on mult-threading, number of parallel sub-compilation jobs: 8 
+Determining compilation order of HDL files
+Analyzing Verilog file "X:/0_xlinx_ISE/ANC_Top_2.0/SignedAdder.v" into library work
+Analyzing Verilog file "X:/0_xlinx_ISE/ANC_Top_2.0/Signal_compare.v" into library work
+Analyzing Verilog file "X:/0_xlinx_ISE/ANC_Top_2.0/RS_FF.v" into library work
+Analyzing Verilog file "X:/0_xlinx_ISE/ANC_Top_2.0/Multiplier.v" into library work
+Analyzing Verilog file "X:/0_xlinx_ISE/ANC_Top_2.0/ipcore_dir/BlockRam.v" into library work
+Analyzing Verilog file "X:/0_xlinx_ISE/ANC_Top_2.0/Greater_V.v" into library work
+Analyzing Verilog file "X:/0_xlinx_ISE/ANC_Top_2.0/SPI_v.v" into library work
+Analyzing Verilog file "X:/0_xlinx_ISE/ANC_Top_2.0/PWM_v.v" into library work
+Analyzing Verilog file "X:/0_xlinx_ISE/ANC_Top_2.0/ANCSaturation_V.v" into library work
+Analyzing Verilog file "X:/0_xlinx_ISE/ANC_Top_2.0/ANCFilter_V.v" into library work
+Analyzing Verilog file "X:/0_xlinx_ISE/ANC_Top_2.0/ANCDataMem_V.v" into library work
+Analyzing Verilog file "X:/0_xlinx_ISE/ANC_Top_2.0/ANCControl_V.v" into library work
+Analyzing Verilog file "X:/0_xlinx_ISE/ANC_Top_2.0/ANCCoefMem_V.v" into library work
+Analyzing Verilog file "X:/0_xlinx_ISE/ANC_Top_2.0/ANCAdapt_V.v" into library work
+Analyzing Verilog file "X:/0_xlinx_ISE/ANC_Top_2.0/ANCTop_V.v" into library work
+Analyzing Verilog file "X:/0_xlinx_ISE/ANC_Top_2.0/ANCTop_Tb.v" into library work
+Analyzing Verilog file "C:/Xilinx/14.1/ISE_DS/ISE//verilog/src/glbl.v" into library work
+Starting static elaboration
+Completed static elaboration
+Compiling module SPI_v
+Compiling module ANCControl_V
+Compiling module Greater_v
+Compiling module BLK_MEM_GEN_V7_1_output_stage(C_...
+Compiling module BLK_MEM_GEN_V7_1_output_stage(C_...
+Compiling module BLK_MEM_GEN_V7_1_softecc_output_...
+Compiling module BLK_MEM_GEN_V7_1_mem_module(C_CO...
+Compiling module BLK_MEM_GEN_V7_1(C_FAMILY="spart...
+Compiling module BlockRam
+Compiling module ANCDataMem_V
+Compiling module ANCCoefMem_V
+Compiling module Multiplier
+Compiling module SignedAdder
+Compiling module ANCAdapt_V
+Compiling module ANCFilter_V
+Compiling module ANCSaturation_V
+Compiling module Signal_compare
+Compiling module RS_FF
+Compiling module PWM_v
+Compiling module ANCTop_V
+Compiling module ANCTop_Tb
+Compiling module glbl
+Time Resolution for simulation is 1ps.
+Waiting for 4 sub-compilation(s) to finish...
+Compiled 22 Verilog Units
+Built simulation executable X:/0_xlinx_ISE/ANC_Top_2.0/ANCTop_Tb_isim_beh.exe
+Fuse Memory Usage: 30440 KB
+Fuse CPU Usage: 717 ms

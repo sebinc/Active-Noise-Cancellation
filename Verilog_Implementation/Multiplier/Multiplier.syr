@@ -1,0 +1,343 @@
+Release 14.1 - xst P.15xf (nt64)
+Copyright (c) 1995-2012 Xilinx, Inc.  All rights reserved.
+--> Parameter TMPDIR set to xst/projnav.tmp
+
+
+Total REAL time to Xst completion: 0.00 secs
+Total CPU time to Xst completion: 0.13 secs
+ 
+--> Parameter xsthdpdir set to xst
+
+
+Total REAL time to Xst completion: 0.00 secs
+Total CPU time to Xst completion: 0.14 secs
+ 
+--> Reading design: Multiplier.prj
+
+TABLE OF CONTENTS
+  1) Synthesis Options Summary
+  2) HDL Parsing
+  3) HDL Elaboration
+  4) HDL Synthesis
+       4.1) HDL Synthesis Report
+  5) Advanced HDL Synthesis
+       5.1) Advanced HDL Synthesis Report
+  6) Low Level Synthesis
+  7) Partition Report
+  8) Design Summary
+       8.1) Primitive and Black Box Usage
+       8.2) Device utilization summary
+       8.3) Partition Resource Summary
+       8.4) Timing Report
+            8.4.1) Clock Information
+            8.4.2) Asynchronous Control Signals Information
+            8.4.3) Timing Summary
+            8.4.4) Timing Details
+            8.4.5) Cross Clock Domains Report
+
+
+=========================================================================
+*                      Synthesis Options Summary                        *
+=========================================================================
+---- Source Parameters
+Input File Name                    : "Multiplier.prj"
+Ignore Synthesis Constraint File   : NO
+
+---- Target Parameters
+Output File Name                   : "Multiplier"
+Output Format                      : NGC
+Target Device                      : xc6slx9-2-csg324
+
+---- Source Options
+Top Module Name                    : Multiplier
+Automatic FSM Extraction           : YES
+FSM Encoding Algorithm             : Auto
+Safe Implementation                : No
+FSM Style                          : LUT
+RAM Extraction                     : Yes
+RAM Style                          : Auto
+ROM Extraction                     : Yes
+Shift Register Extraction          : YES
+ROM Style                          : Auto
+Resource Sharing                   : YES
+Asynchronous To Synchronous        : NO
+Shift Register Minimum Size        : 2
+Use DSP Block                      : Auto
+Automatic Register Balancing       : No
+
+---- Target Options
+LUT Combining                      : Auto
+Reduce Control Sets                : Auto
+Add IO Buffers                     : YES
+Global Maximum Fanout              : 100000
+Add Generic Clock Buffer(BUFG)     : 16
+Register Duplication               : YES
+Optimize Instantiated Primitives   : NO
+Use Clock Enable                   : Auto
+Use Synchronous Set                : Auto
+Use Synchronous Reset              : Auto
+Pack IO Registers into IOBs        : Auto
+Equivalent register Removal        : YES
+
+---- General Options
+Optimization Goal                  : Speed
+Optimization Effort                : 1
+Power Reduction                    : NO
+Keep Hierarchy                     : No
+Netlist Hierarchy                  : As_Optimized
+RTL Output                         : Yes
+Global Optimization                : AllClockNets
+Read Cores                         : YES
+Write Timing Constraints           : NO
+Cross Clock Analysis               : NO
+Hierarchy Separator                : /
+Bus Delimiter                      : <>
+Case Specifier                     : Maintain
+Slice Utilization Ratio            : 100
+BRAM Utilization Ratio             : 100
+DSP48 Utilization Ratio            : 100
+Auto BRAM Packing                  : NO
+Slice Utilization Ratio Delta      : 5
+
+=========================================================================
+
+
+=========================================================================
+*                          HDL Parsing                                  *
+=========================================================================
+Analyzing Verilog file "X:\0_xlinx_ISE\Multiplier\Multiplier.v" into library work
+Parsing module <Multiplier>.
+
+=========================================================================
+*                            HDL Elaboration                            *
+=========================================================================
+
+Elaborating module <Multiplier>.
+
+=========================================================================
+*                           HDL Synthesis                               *
+=========================================================================
+
+Synthesizing Unit <Multiplier>.
+    Related source file is "X:\0_xlinx_ISE\Multiplier\Multiplier.v".
+    Found 20-bit adder for signal <n0069> created at line 52.
+    Found 20-bit adder for signal <n0072> created at line 52.
+    Found 20-bit adder for signal <n0075> created at line 52.
+    Found 20-bit adder for signal <n0078> created at line 52.
+    Found 20-bit adder for signal <n0081> created at line 52.
+    Found 20-bit adder for signal <n0084> created at line 52.
+    Found 20-bit adder for signal <n0087> created at line 52.
+    Found 20-bit adder for signal <n0090> created at line 52.
+    Found 20-bit adder for signal <MulOut<19:0>> created at line 52.
+    Summary:
+	inferred   9 Adder/Subtractor(s).
+	inferred  10 Multiplexer(s).
+Unit <Multiplier> synthesized.
+
+=========================================================================
+HDL Synthesis Report
+
+Macro Statistics
+# Adders/Subtractors                                   : 9
+ 20-bit adder                                          : 9
+# Multiplexers                                         : 10
+ 20-bit 2-to-1 multiplexer                             : 10
+# Xors                                                 : 1
+ 1-bit xor2                                            : 1
+
+=========================================================================
+
+=========================================================================
+*                       Advanced HDL Synthesis                          *
+=========================================================================
+
+
+Synthesizing (advanced) Unit <Multiplier>.
+	The following adders/subtractors are grouped into adder tree <Madd_MulOut<19:0>1> :
+ 	<Madd_n0069> in block <Multiplier>, 	<Madd_n0072> in block <Multiplier>, 	<Madd_n0075> in block <Multiplier>, 	<Madd_n0078> in block <Multiplier>, 	<Madd_n0081> in block <Multiplier>, 	<Madd_n0084> in block <Multiplier>, 	<Madd_n0087> in block <Multiplier>, 	<Madd_n0090> in block <Multiplier>, 	<Madd_MulOut<19:0>> in block <Multiplier>.
+Unit <Multiplier> synthesized (advanced).
+
+=========================================================================
+Advanced HDL Synthesis Report
+
+Macro Statistics
+# Adder Trees                                          : 1
+ 20-bit / 10-inputs adder tree                         : 1
+# Multiplexers                                         : 10
+ 20-bit 2-to-1 multiplexer                             : 10
+# Xors                                                 : 1
+ 1-bit xor2                                            : 1
+
+=========================================================================
+
+=========================================================================
+*                         Low Level Synthesis                           *
+=========================================================================
+
+Optimizing unit <Multiplier> ...
+
+Mapping all equations...
+Building and optimizing final netlist ...
+Found area constraint ratio of 100 (+ 5) on block Multiplier, actual ratio is 6.
+
+Final Macro Processing ...
+
+=========================================================================
+Final Register Report
+
+Found no macro
+=========================================================================
+
+=========================================================================
+*                           Partition Report                            *
+=========================================================================
+
+Partition Implementation Status
+-------------------------------
+
+  No Partitions were found in this design.
+
+-------------------------------
+
+=========================================================================
+*                            Design Summary                             *
+=========================================================================
+
+Top Level Output File Name         : Multiplier.ngc
+
+Primitive and Black Box Usage:
+------------------------------
+# BELS                             : 468
+#      GND                         : 1
+#      LUT1                        : 2
+#      LUT2                        : 120
+#      LUT3                        : 76
+#      LUT4                        : 76
+#      MUXCY                       : 95
+#      XORCY                       : 98
+# IO Buffers                       : 43
+#      IBUF                        : 22
+#      OBUF                        : 21
+
+Device utilization summary:
+---------------------------
+
+Selected Device : 6slx9csg324-2 
+
+
+Slice Logic Utilization: 
+ Number of Slice LUTs:                  274  out of   5720     4%  
+    Number used as Logic:               274  out of   5720     4%  
+
+Slice Logic Distribution: 
+ Number of LUT Flip Flop pairs used:    274
+   Number with an unused Flip Flop:     274  out of    274   100%  
+   Number with an unused LUT:             0  out of    274     0%  
+   Number of fully used LUT-FF pairs:     0  out of    274     0%  
+   Number of unique control sets:         0
+
+IO Utilization: 
+ Number of IOs:                          43
+ Number of bonded IOBs:                  43  out of    200    21%  
+
+Specific Feature Utilization:
+
+---------------------------
+Partition Resource Summary:
+---------------------------
+
+  No Partitions were found in this design.
+
+---------------------------
+
+
+=========================================================================
+Timing Report
+
+NOTE: THESE TIMING NUMBERS ARE ONLY A SYNTHESIS ESTIMATE.
+      FOR ACCURATE TIMING INFORMATION PLEASE REFER TO THE TRACE REPORT
+      GENERATED AFTER PLACE-and-ROUTE.
+
+Clock Information:
+------------------
+No clock signals found in this design
+
+Asynchronous Control Signals Information:
+----------------------------------------
+No asynchronous control signals found in this design
+
+Timing Summary:
+---------------
+Speed Grade: -2
+
+   Minimum period: No path found
+   Minimum input arrival time before clock: No path found
+   Maximum output required time after clock: No path found
+   Maximum combinational path delay: 12.933ns
+
+Timing Details:
+---------------
+All values displayed in nanoseconds (ns)
+
+=========================================================================
+Timing constraint: Default path analysis
+  Total number of paths / destination ports: 538674 / 21
+-------------------------------------------------------------------------
+Delay:               12.933ns (Levels of Logic = 27)
+  Source:            b<0> (PAD)
+  Destination:       MulOut<19> (PAD)
+
+  Data Path: b<0> to MulOut<19>
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     IBUF:I->O            10   1.328   1.116  b_0_IBUF (b_0_IBUF)
+     LUT2:I0->O            2   0.250   0.954  Mmux_a021 (a0<1>)
+     LUT3:I0->O            1   0.235   0.682  ADDERTREE_INTERNAL_Madd11 (ADDERTREE_INTERNAL_Madd11)
+     LUT4:I3->O            1   0.254   0.000  ADDERTREE_INTERNAL_Madd1_lut<0>2 (ADDERTREE_INTERNAL_Madd1_lut<0>2)
+     MUXCY:S->O            1   0.215   0.000  ADDERTREE_INTERNAL_Madd1_cy<0>_1 (ADDERTREE_INTERNAL_Madd1_cy<0>2)
+     MUXCY:CI->O           1   0.023   0.000  ADDERTREE_INTERNAL_Madd1_cy<0>_2 (ADDERTREE_INTERNAL_Madd1_cy<0>3)
+     MUXCY:CI->O           1   0.023   0.000  ADDERTREE_INTERNAL_Madd1_cy<0>_3 (ADDERTREE_INTERNAL_Madd1_cy<0>4)
+     MUXCY:CI->O           1   0.023   0.000  ADDERTREE_INTERNAL_Madd1_cy<0>_4 (ADDERTREE_INTERNAL_Madd1_cy<0>5)
+     MUXCY:CI->O           1   0.023   0.000  ADDERTREE_INTERNAL_Madd1_cy<0>_5 (ADDERTREE_INTERNAL_Madd1_cy<0>6)
+     MUXCY:CI->O           1   0.023   0.000  ADDERTREE_INTERNAL_Madd1_cy<0>_6 (ADDERTREE_INTERNAL_Madd1_cy<0>7)
+     MUXCY:CI->O           1   0.023   0.000  ADDERTREE_INTERNAL_Madd1_cy<0>_7 (ADDERTREE_INTERNAL_Madd1_cy<0>8)
+     MUXCY:CI->O           1   0.023   0.000  ADDERTREE_INTERNAL_Madd1_cy<0>_8 (ADDERTREE_INTERNAL_Madd1_cy<0>9)
+     MUXCY:CI->O           1   0.023   0.000  ADDERTREE_INTERNAL_Madd1_cy<0>_9 (ADDERTREE_INTERNAL_Madd1_cy<0>10)
+     MUXCY:CI->O           1   0.023   0.000  ADDERTREE_INTERNAL_Madd1_cy<0>_10 (ADDERTREE_INTERNAL_Madd1_cy<0>11)
+     MUXCY:CI->O           1   0.023   0.000  ADDERTREE_INTERNAL_Madd1_cy<0>_11 (ADDERTREE_INTERNAL_Madd1_cy<0>12)
+     MUXCY:CI->O           1   0.023   0.000  ADDERTREE_INTERNAL_Madd1_cy<0>_12 (ADDERTREE_INTERNAL_Madd1_cy<0>13)
+     MUXCY:CI->O           1   0.023   0.000  ADDERTREE_INTERNAL_Madd1_cy<0>_13 (ADDERTREE_INTERNAL_Madd1_cy<0>14)
+     MUXCY:CI->O           1   0.023   0.000  ADDERTREE_INTERNAL_Madd1_cy<0>_14 (ADDERTREE_INTERNAL_Madd1_cy<0>15)
+     XORCY:CI->O           2   0.206   0.726  ADDERTREE_INTERNAL_Madd1_xor<0>_15 (ADDERTREE_INTERNAL_Madd_161)
+     LUT3:I2->O            1   0.254   0.682  ADDERTREE_INTERNAL_Madd316 (ADDERTREE_INTERNAL_Madd316)
+     LUT4:I3->O            1   0.254   0.000  ADDERTREE_INTERNAL_Madd3_lut<0>17 (ADDERTREE_INTERNAL_Madd3_lut<0>17)
+     MUXCY:S->O            1   0.215   0.000  ADDERTREE_INTERNAL_Madd3_cy<0>_16 (ADDERTREE_INTERNAL_Madd3_cy<0>17)
+     XORCY:CI->O           1   0.206   0.790  ADDERTREE_INTERNAL_Madd3_xor<0>_17 (ADDERTREE_INTERNAL_Madd_183)
+     LUT2:I0->O            1   0.250   0.000  ADDERTREE_INTERNAL_Madd8_lut<18> (ADDERTREE_INTERNAL_Madd8_lut<18>)
+     MUXCY:S->O            0   0.215   0.000  ADDERTREE_INTERNAL_Madd8_cy<18> (ADDERTREE_INTERNAL_Madd8_cy<18>)
+     XORCY:CI->O           1   0.206   0.681  ADDERTREE_INTERNAL_Madd8_xor<19> (MulOut_19_OBUF)
+     OBUF:I->O                 2.912          MulOut_19_OBUF (MulOut<19>)
+    ----------------------------------------
+    Total                     12.933ns (7.302ns logic, 5.631ns route)
+                                       (56.5% logic, 43.5% route)
+
+=========================================================================
+
+Cross Clock Domains Report:
+--------------------------
+
+=========================================================================
+
+
+Total REAL time to Xst completion: 7.00 secs
+Total CPU time to Xst completion: 7.17 secs
+ 
+--> 
+
+Total memory usage is 231268 kilobytes
+
+Number of errors   :    0 (   0 filtered)
+Number of warnings :    0 (   0 filtered)
+Number of infos    :    0 (   0 filtered)
+

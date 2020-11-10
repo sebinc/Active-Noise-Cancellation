@@ -1,0 +1,1155 @@
+Release 14.1 - xst P.15xf (nt64)
+Copyright (c) 1995-2012 Xilinx, Inc.  All rights reserved.
+--> Parameter TMPDIR set to xst/projnav.tmp
+
+
+Total REAL time to Xst completion: 0.00 secs
+Total CPU time to Xst completion: 0.13 secs
+ 
+--> Parameter xsthdpdir set to xst
+
+
+Total REAL time to Xst completion: 0.00 secs
+Total CPU time to Xst completion: 0.13 secs
+ 
+--> Reading design: ANCTop_V.prj
+
+TABLE OF CONTENTS
+  1) Synthesis Options Summary
+  2) HDL Parsing
+  3) HDL Elaboration
+  4) HDL Synthesis
+       4.1) HDL Synthesis Report
+  5) Advanced HDL Synthesis
+       5.1) Advanced HDL Synthesis Report
+  6) Low Level Synthesis
+  7) Partition Report
+  8) Design Summary
+       8.1) Primitive and Black Box Usage
+       8.2) Device utilization summary
+       8.3) Partition Resource Summary
+       8.4) Timing Report
+            8.4.1) Clock Information
+            8.4.2) Asynchronous Control Signals Information
+            8.4.3) Timing Summary
+            8.4.4) Timing Details
+            8.4.5) Cross Clock Domains Report
+
+
+=========================================================================
+*                      Synthesis Options Summary                        *
+=========================================================================
+---- Source Parameters
+Input File Name                    : "ANCTop_V.prj"
+Ignore Synthesis Constraint File   : NO
+
+---- Target Parameters
+Output File Name                   : "ANCTop_V"
+Output Format                      : NGC
+Target Device                      : xc6slx9-2-csg324
+
+---- Source Options
+Top Module Name                    : ANCTop_V
+Automatic FSM Extraction           : YES
+FSM Encoding Algorithm             : Auto
+Safe Implementation                : No
+FSM Style                          : LUT
+RAM Extraction                     : Yes
+RAM Style                          : Auto
+ROM Extraction                     : Yes
+Shift Register Extraction          : YES
+ROM Style                          : Auto
+Resource Sharing                   : YES
+Asynchronous To Synchronous        : NO
+Shift Register Minimum Size        : 2
+Use DSP Block                      : Auto
+Automatic Register Balancing       : No
+
+---- Target Options
+LUT Combining                      : Auto
+Reduce Control Sets                : Auto
+Add IO Buffers                     : YES
+Global Maximum Fanout              : 100000
+Add Generic Clock Buffer(BUFG)     : 16
+Register Duplication               : YES
+Optimize Instantiated Primitives   : NO
+Use Clock Enable                   : Auto
+Use Synchronous Set                : Auto
+Use Synchronous Reset              : Auto
+Pack IO Registers into IOBs        : Auto
+Equivalent register Removal        : YES
+
+---- General Options
+Optimization Goal                  : Speed
+Optimization Effort                : 1
+Power Reduction                    : NO
+Keep Hierarchy                     : No
+Netlist Hierarchy                  : As_Optimized
+RTL Output                         : Yes
+Global Optimization                : AllClockNets
+Read Cores                         : YES
+Write Timing Constraints           : NO
+Cross Clock Analysis               : NO
+Hierarchy Separator                : /
+Bus Delimiter                      : <>
+Case Specifier                     : Maintain
+Slice Utilization Ratio            : 100
+BRAM Utilization Ratio             : 100
+DSP48 Utilization Ratio            : 100
+Auto BRAM Packing                  : NO
+Slice Utilization Ratio Delta      : 5
+
+---- Other Options
+Cores Search Directories           : {"ipcore_dir"  }
+
+=========================================================================
+
+
+=========================================================================
+*                          HDL Parsing                                  *
+=========================================================================
+Analyzing Verilog file "X:\0_xlinx_ISE\ANC_Top_2.0\SignedAdder.v" into library work
+Parsing module <SignedAdder>.
+Analyzing Verilog file "X:\0_xlinx_ISE\ANC_Top_2.0\Signal_compare.v" into library work
+Parsing module <Signal_compare>.
+Analyzing Verilog file "X:\0_xlinx_ISE\ANC_Top_2.0\RS_FF.v" into library work
+Parsing module <RS_FF>.
+Analyzing Verilog file "X:\0_xlinx_ISE\ANC_Top_2.0\Multiplier.v" into library work
+Parsing module <Multiplier>.
+Analyzing Verilog file "X:\0_xlinx_ISE\ANC_Top_2.0\ipcore_dir\BlockRam.v" into library work
+Parsing module <BlockRam>.
+Analyzing Verilog file "X:\0_xlinx_ISE\ANC_Top_2.0\Greater_V.v" into library work
+Parsing module <Greater_v>.
+Analyzing Verilog file "X:\0_xlinx_ISE\ANC_Top_2.0\SPI_v.v" into library work
+Parsing module <SPI_v>.
+Analyzing Verilog file "X:\0_xlinx_ISE\ANC_Top_2.0\PWM_v.v" into library work
+Parsing module <PWM_v>.
+Analyzing Verilog file "X:\0_xlinx_ISE\ANC_Top_2.0\ANCSaturation_V.v" into library work
+Parsing module <ANCSaturation_V>.
+Analyzing Verilog file "X:\0_xlinx_ISE\ANC_Top_2.0\ANCFilter_V.v" into library work
+Parsing module <ANCFilter_V>.
+Analyzing Verilog file "X:\0_xlinx_ISE\ANC_Top_2.0\ANCDataMem_V.v" into library work
+Parsing module <ANCDataMem_V>.
+Analyzing Verilog file "X:\0_xlinx_ISE\ANC_Top_2.0\ANCControl_V.v" into library work
+Parsing module <ANCControl_V>.
+Analyzing Verilog file "X:\0_xlinx_ISE\ANC_Top_2.0\ANCCoefMem_V.v" into library work
+Parsing module <ANCCoefMem_V>.
+Analyzing Verilog file "X:\0_xlinx_ISE\ANC_Top_2.0\ANCAdapt_V.v" into library work
+Parsing module <ANCAdapt_V>.
+Analyzing Verilog file "X:\0_xlinx_ISE\ANC_Top_2.0\ANCTop_V.v" into library work
+Parsing module <ANCTop_V>.
+
+=========================================================================
+*                            HDL Elaboration                            *
+=========================================================================
+
+Elaborating module <ANCTop_V>.
+
+Elaborating module <SPI_v>.
+
+Elaborating module <ANCControl_V>.
+
+Elaborating module <ANCDataMem_V>.
+
+Elaborating module <Greater_v(SIG_WIDTH=7)>.
+
+Elaborating module <BlockRam>.
+WARNING:HDLCompiler:1499 - "X:\0_xlinx_ISE\ANC_Top_2.0\ipcore_dir\BlockRam.v" Line 39: Empty module <BlockRam> remains a black box.
+
+Elaborating module <ANCCoefMem_V>.
+
+Elaborating module <ANCAdapt_V>.
+
+Elaborating module <Multiplier>.
+
+Elaborating module <SignedAdder>.
+
+Elaborating module <ANCFilter_V>.
+
+Elaborating module <ANCSaturation_V>.
+
+Elaborating module <PWM_v>.
+
+Elaborating module <Signal_compare>.
+
+Elaborating module <RS_FF>.
+
+=========================================================================
+*                           HDL Synthesis                               *
+=========================================================================
+
+Synthesizing Unit <ANCTop_V>.
+    Related source file is "X:\0_xlinx_ISE\ANC_Top_2.0\ANCTop_V.v".
+WARNING:Xst:647 - Input <ResetSwitch> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+    Found 5-bit register for signal <PowerOnReset>.
+    Found 15-bit register for signal <LED_Blink>.
+    Found 1-bit register for signal <Clk_Div>.
+    Found 5-bit adder for signal <PowerOnReset[4]_GND_1_o_add_4_OUT> created at line 99.
+    Found 15-bit adder for signal <LED_Blink[14]_GND_1_o_add_8_OUT> created at line 104.
+    Summary:
+	inferred   2 Adder/Subtractor(s).
+	inferred  21 D-type flip-flop(s).
+Unit <ANCTop_V> synthesized.
+
+Synthesizing Unit <SPI_v>.
+    Related source file is "X:\0_xlinx_ISE\ANC_Top_2.0\SPI_v.v".
+    Found 1-bit register for signal <ResetOld>.
+    Found 16-bit register for signal <bitShiftReg>.
+    Found 4-bit register for signal <ShiftCount>.
+    Found 11-bit register for signal <DataOut_reg>.
+    Found 4-bit adder for signal <ShiftCount[3]_GND_2_o_add_8_OUT> created at line 76.
+    Summary:
+	inferred   1 Adder/Subtractor(s).
+	inferred  32 D-type flip-flop(s).
+Unit <SPI_v> synthesized.
+
+Synthesizing Unit <ANCControl_V>.
+    Related source file is "X:\0_xlinx_ISE\ANC_Top_2.0\ANCControl_V.v".
+    Found 1-bit register for signal <FilterEN_reg>.
+    Found 1-bit register for signal <SSPIFOld_2>.
+    Found 1-bit register for signal <SSPIFOld_1>.
+    Found 10-bit register for signal <ControlReg>.
+    Found 1-bit register for signal <RAMDataEN_reg>.
+    Found 10-bit adder for signal <ControlReg[9]_GND_3_o_add_10_OUT> created at line 97.
+    Summary:
+	inferred   1 Adder/Subtractor(s).
+	inferred  14 D-type flip-flop(s).
+Unit <ANCControl_V> synthesized.
+
+Synthesizing Unit <ANCDataMem_V>.
+    Related source file is "X:\0_xlinx_ISE\ANC_Top_2.0\ANCDataMem_V.v".
+    Found 1-bit register for signal <RamShiftENOld>.
+    Found 1-bit register for signal <FiltENOld>.
+    Found 8-bit register for signal <Control>.
+    Found 11-bit register for signal <SPIData_reg>.
+    Found 8-bit subtractor for signal <Control[7]_GND_4_o_sub_13_OUT> created at line 103.
+    Found 7-bit adder for signal <AddSel_w[6]_GND_4_o_add_2_OUT> created at line 75.
+    Summary:
+	inferred   2 Adder/Subtractor(s).
+	inferred  21 D-type flip-flop(s).
+	inferred   5 Multiplexer(s).
+Unit <ANCDataMem_V> synthesized.
+
+Synthesizing Unit <Greater_v>.
+    Related source file is "X:\0_xlinx_ISE\ANC_Top_2.0\Greater_V.v".
+        SIG_WIDTH = 7
+    Found 7-bit comparator greater for signal <x_grtr_y> created at line 35
+    Summary:
+	inferred   1 Comparator(s).
+Unit <Greater_v> synthesized.
+
+Synthesizing Unit <ANCCoefMem_V>.
+    Related source file is "X:\0_xlinx_ISE\ANC_Top_2.0\ANCCoefMem_V.v".
+    Found 8-bit register for signal <CoefControl>.
+    Found 1-bit register for signal <FiltENOld>.
+    Found 8-bit subtractor for signal <CoefControl[7]_GND_7_o_sub_7_OUT> created at line 84.
+    Summary:
+	inferred   1 Adder/Subtractor(s).
+	inferred   9 D-type flip-flop(s).
+	inferred   4 Multiplexer(s).
+Unit <ANCCoefMem_V> synthesized.
+
+Synthesizing Unit <ANCAdapt_V>.
+    Related source file is "X:\0_xlinx_ISE\ANC_Top_2.0\ANCAdapt_V.v".
+    Found 1-bit register for signal <FiltENOld>.
+    Found 11-bit register for signal <WzOld>.
+    Found 1-bit register for signal <AdaptControl>.
+    Found 11-bit register for signal <WzNew_reg>.
+    Summary:
+	inferred  24 D-type flip-flop(s).
+Unit <ANCAdapt_V> synthesized.
+
+Synthesizing Unit <Multiplier>.
+    Related source file is "X:\0_xlinx_ISE\ANC_Top_2.0\Multiplier.v".
+    Found 20-bit adder for signal <n0072> created at line 54.
+    Found 20-bit adder for signal <n0075> created at line 54.
+    Found 20-bit adder for signal <n0078> created at line 54.
+    Found 20-bit adder for signal <n0081> created at line 54.
+    Found 20-bit adder for signal <n0084> created at line 54.
+    Found 20-bit adder for signal <n0087> created at line 54.
+    Found 20-bit adder for signal <n0090> created at line 54.
+    Found 20-bit adder for signal <n0093> created at line 54.
+    Found 20-bit adder for signal <a0[19]_a9[19]_add_30_OUT> created at line 54.
+    Summary:
+	inferred   9 Adder/Subtractor(s).
+	inferred  11 Multiplexer(s).
+Unit <Multiplier> synthesized.
+
+Synthesizing Unit <SignedAdder>.
+    Related source file is "X:\0_xlinx_ISE\ANC_Top_2.0\SignedAdder.v".
+    Found 20-bit adder for signal <aa[19]_GND_10_o_add_6_OUT> created at line 58.
+    Found 20-bit adder for signal <bb[19]_GND_10_o_add_9_OUT> created at line 59.
+    Found 21-bit adder for signal <n0041> created at line 60.
+    Found 21-bit adder for signal <n0040> created at line 60.
+    Found 20-bit adder for signal <addtemp[19]_GND_10_o_add_15_OUT> created at line 61.
+    Summary:
+	inferred   4 Adder/Subtractor(s).
+	inferred   9 Multiplexer(s).
+Unit <SignedAdder> synthesized.
+
+Synthesizing Unit <ANCFilter_V>.
+    Related source file is "X:\0_xlinx_ISE\ANC_Top_2.0\ANCFilter_V.v".
+    Found 1-bit register for signal <FilterENSigOld>.
+    Found 21-bit register for signal <FiltNResult_loc>.
+    Found 21-bit register for signal <FiltNResult>.
+    Found 11-bit register for signal <FiltSum>.
+    Summary:
+	inferred  54 D-type flip-flop(s).
+	inferred   1 Multiplexer(s).
+Unit <ANCFilter_V> synthesized.
+
+Synthesizing Unit <ANCSaturation_V>.
+    Related source file is "X:\0_xlinx_ISE\ANC_Top_2.0\ANCSaturation_V.v".
+    Found 11-bit register for signal <MicIn_reg>.
+    Found 1-bit register for signal <FiltComplete_old>.
+    Found 1-bit register for signal <ResetOld>.
+    Found 11-bit register for signal <Err_reg>.
+    Found 10-bit register for signal <ANCAudioOut_reg>.
+    Summary:
+	inferred  34 D-type flip-flop(s).
+	inferred   9 Multiplexer(s).
+Unit <ANCSaturation_V> synthesized.
+
+Synthesizing Unit <PWM_v>.
+    Related source file is "X:\0_xlinx_ISE\ANC_Top_2.0\PWM_v.v".
+    Found 11-bit register for signal <ClkCount>.
+    Found 11-bit adder for signal <ClkCount[10]_GND_13_o_add_1_OUT> created at line 39.
+    Summary:
+	inferred   1 Adder/Subtractor(s).
+	inferred  11 D-type flip-flop(s).
+Unit <PWM_v> synthesized.
+
+Synthesizing Unit <Signal_compare>.
+    Related source file is "X:\0_xlinx_ISE\ANC_Top_2.0\Signal_compare.v".
+    Summary:
+Unit <Signal_compare> synthesized.
+
+Synthesizing Unit <RS_FF>.
+    Related source file is "X:\0_xlinx_ISE\ANC_Top_2.0\RS_FF.v".
+    Found 1-bit register for signal <Q1>.
+    Summary:
+	inferred   1 D-type flip-flop(s).
+	inferred   1 Multiplexer(s).
+Unit <RS_FF> synthesized.
+
+=========================================================================
+HDL Synthesis Report
+
+Macro Statistics
+# Adders/Subtractors                                   : 38
+ 10-bit adder                                          : 1
+ 11-bit adder                                          : 1
+ 15-bit adder                                          : 1
+ 20-bit adder                                          : 27
+ 21-bit adder                                          : 3
+ 4-bit adder                                           : 1
+ 5-bit adder                                           : 1
+ 7-bit adder                                           : 1
+ 8-bit subtractor                                      : 2
+# Registers                                            : 33
+ 1-bit register                                        : 15
+ 10-bit register                                       : 2
+ 11-bit register                                       : 8
+ 15-bit register                                       : 1
+ 16-bit register                                       : 1
+ 21-bit register                                       : 2
+ 4-bit register                                        : 1
+ 5-bit register                                        : 1
+ 8-bit register                                        : 2
+# Comparators                                          : 2
+ 7-bit comparator greater                              : 2
+# Multiplexers                                         : 69
+ 1-bit 2-to-1 multiplexer                              : 13
+ 11-bit 2-to-1 multiplexer                             : 2
+ 16-bit 2-to-1 multiplexer                             : 4
+ 20-bit 2-to-1 multiplexer                             : 29
+ 21-bit 2-to-1 multiplexer                             : 18
+ 7-bit 2-to-1 multiplexer                              : 3
+# Xors                                                 : 16
+ 1-bit xor2                                            : 16
+
+=========================================================================
+INFO:Xst:1767 - HDL ADVISOR - Resource sharing has identified that some arithmetic operations in this design can share the same physical resources for reduced device utilization. For improved clock frequency you may try to disable resource sharing.
+
+=========================================================================
+*                       Advanced HDL Synthesis                          *
+=========================================================================
+
+Reading core <ipcore_dir/BlockRam.ngc>.
+Loading core <BlockRam> for timing and area information for instance <DataRam>.
+Loading core <BlockRam> for timing and area information for instance <CoefRam>.
+WARNING:Xst:1710 - FF/Latch <DataOut_reg_0> (without init value) has a constant value of 0 in block <ReadNoise>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <SPIData_reg_0> (without init value) has a constant value of 0 in block <DataMemBlock>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <MicIn_reg_0> (without init value) has a constant value of 0 in block <SaturationBlock>. This FF/Latch will be trimmed during the optimization process.
+
+Synthesizing (advanced) Unit <ANCCoefMem_V>.
+The following registers are absorbed into counter <CoefControl>: 1 register on signal <CoefControl>.
+Unit <ANCCoefMem_V> synthesized (advanced).
+
+Synthesizing (advanced) Unit <ANCControl_V>.
+The following registers are absorbed into counter <ControlReg>: 1 register on signal <ControlReg>.
+Unit <ANCControl_V> synthesized (advanced).
+
+Synthesizing (advanced) Unit <ANCDataMem_V>.
+The following registers are absorbed into counter <Control>: 1 register on signal <Control>.
+Unit <ANCDataMem_V> synthesized (advanced).
+
+Synthesizing (advanced) Unit <ANCTop_V>.
+The following registers are absorbed into counter <LED_Blink>: 1 register on signal <LED_Blink>.
+The following registers are absorbed into counter <PowerOnReset>: 1 register on signal <PowerOnReset>.
+Unit <ANCTop_V> synthesized (advanced).
+
+Synthesizing (advanced) Unit <Multiplier>.
+	The following adders/subtractors are grouped into adder tree <Madd_a0[19]_a9[19]_add_30_OUT1> :
+ 	<Madd_n0072> in block <Multiplier>, 	<Madd_n0075> in block <Multiplier>, 	<Madd_n0078> in block <Multiplier>, 	<Madd_n0081> in block <Multiplier>, 	<Madd_n0084> in block <Multiplier>, 	<Madd_n0087> in block <Multiplier>, 	<Madd_n0090> in block <Multiplier>, 	<Madd_n0093> in block <Multiplier>, 	<Madd_a0[19]_a9[19]_add_30_OUT> in block <Multiplier>.
+Unit <Multiplier> synthesized (advanced).
+
+Synthesizing (advanced) Unit <PWM_v>.
+The following registers are absorbed into counter <ClkCount>: 1 register on signal <ClkCount>.
+Unit <PWM_v> synthesized (advanced).
+
+Synthesizing (advanced) Unit <SPI_v>.
+The following registers are absorbed into counter <ShiftCount>: 1 register on signal <ShiftCount>.
+Unit <SPI_v> synthesized (advanced).
+
+=========================================================================
+Advanced HDL Synthesis Report
+
+Macro Statistics
+# Adders/Subtractors                                   : 13
+ 20-bit adder                                          : 9
+ 21-bit adder                                          : 3
+ 7-bit adder                                           : 1
+# Adder Trees                                          : 2
+ 20-bit / 10-inputs adder tree                         : 2
+# Counters                                             : 7
+ 10-bit up counter                                     : 1
+ 11-bit up counter                                     : 1
+ 15-bit up counter                                     : 1
+ 4-bit up counter                                      : 1
+ 5-bit up counter                                      : 1
+ 8-bit down counter                                    : 2
+# Registers                                            : 160
+ Flip-Flops                                            : 160
+# Comparators                                          : 2
+ 7-bit comparator greater                              : 2
+# Multiplexers                                         : 68
+ 1-bit 2-to-1 multiplexer                              : 12
+ 11-bit 2-to-1 multiplexer                             : 2
+ 16-bit 2-to-1 multiplexer                             : 4
+ 20-bit 2-to-1 multiplexer                             : 29
+ 21-bit 2-to-1 multiplexer                             : 18
+ 7-bit 2-to-1 multiplexer                              : 3
+# Xors                                                 : 16
+ 1-bit xor2                                            : 16
+
+=========================================================================
+
+=========================================================================
+*                         Low Level Synthesis                           *
+=========================================================================
+WARNING:Xst:1710 - FF/Latch <DataOut_reg_0> (without init value) has a constant value of 0 in block <SPI_v>. This FF/Latch will be trimmed during the optimization process.
+
+Optimizing unit <ANCTop_V> ...
+
+Optimizing unit <SPI_v> ...
+
+Optimizing unit <ANCControl_V> ...
+
+Optimizing unit <ANCDataMem_V> ...
+
+Optimizing unit <ANCCoefMem_V> ...
+
+Optimizing unit <ANCAdapt_V> ...
+
+Optimizing unit <Multiplier> ...
+
+Optimizing unit <SignedAdder> ...
+
+Optimizing unit <ANCFilter_V> ...
+
+Optimizing unit <ANCSaturation_V> ...
+WARNING:Xst:1710 - FF/Latch <DataMemBlock/SPIData_reg_0> (without init value) has a constant value of 0 in block <ANCTop_V>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <SaturationBlock/MicIn_reg_0> (without init value) has a constant value of 0 in block <ANCTop_V>. This FF/Latch will be trimmed during the optimization process.
+INFO:Xst:2261 - The FF/Latch <DataMemBlock/FiltENOld> in Unit <ANCTop_V> is equivalent to the following 2 FFs/Latches, which will be removed : <CoefMemBlock/FiltENOld> <AdaptBlock/FiltENOld> 
+
+Mapping all equations...
+Building and optimizing final netlist ...
+Found area constraint ratio of 100 (+ 5) on block ANCTop_V, actual ratio is 25.
+FlipFlop ReadNoise/DataOut_reg_8 has been replicated 1 time(s) to handle iob=true attribute.
+FlipFlop ReadNoise/DataOut_reg_7 has been replicated 1 time(s) to handle iob=true attribute.
+FlipFlop ReadNoise/DataOut_reg_6 has been replicated 1 time(s) to handle iob=true attribute.
+FlipFlop ReadNoise/DataOut_reg_5 has been replicated 1 time(s) to handle iob=true attribute.
+FlipFlop ReadNoise/DataOut_reg_4 has been replicated 1 time(s) to handle iob=true attribute.
+FlipFlop ReadNoise/DataOut_reg_3 has been replicated 1 time(s) to handle iob=true attribute.
+
+Final Macro Processing ...
+
+Processing Unit <ANCTop_V> :
+	Found 6-bit shift register for signal <ReadNoise/bitShiftReg_15>.
+Unit <ANCTop_V> processed.
+
+=========================================================================
+Final Register Report
+
+Macro Statistics
+# Registers                                            : 216
+ Flip-Flops                                            : 216
+# Shift Registers                                      : 1
+ 6-bit shift register                                  : 1
+
+=========================================================================
+
+=========================================================================
+*                           Partition Report                            *
+=========================================================================
+
+Partition Implementation Status
+-------------------------------
+
+  No Partitions were found in this design.
+
+-------------------------------
+
+=========================================================================
+*                            Design Summary                             *
+=========================================================================
+
+Top Level Output File Name         : ANCTop_V.ngc
+
+Primitive and Black Box Usage:
+------------------------------
+# BELS                             : 2000
+#      GND                         : 5
+#      INV                         : 110
+#      LUT1                        : 44
+#      LUT2                        : 146
+#      LUT3                        : 385
+#      LUT4                        : 197
+#      LUT5                        : 34
+#      LUT6                        : 194
+#      MUXCY                       : 443
+#      VCC                         : 3
+#      XORCY                       : 439
+# FlipFlops/Latches                : 217
+#      FD                          : 61
+#      FD_1                        : 46
+#      FDE                         : 7
+#      FDE_1                       : 10
+#      FDR                         : 74
+#      FDR_1                       : 11
+#      FDS                         : 8
+# RAMS                             : 2
+#      RAMB8BWER                   : 2
+# Shift Registers                  : 1
+#      SRLC16E                     : 1
+# Clock Buffers                    : 4
+#      BUFG                        : 3
+#      BUFGP                       : 1
+# IO Buffers                       : 12
+#      IBUF                        : 2
+#      OBUF                        : 10
+
+Device utilization summary:
+---------------------------
+
+Selected Device : 6slx9csg324-2 
+
+
+Slice Logic Utilization: 
+ Number of Slice Registers:             211  out of  11440     1%  
+ Number of Slice LUTs:                 1111  out of   5720    19%  
+    Number used as Logic:              1110  out of   5720    19%  
+    Number used as Memory:                1  out of   1440     0%  
+       Number used as SRL:                1
+
+Slice Logic Distribution: 
+ Number of LUT Flip Flop pairs used:   1162
+   Number with an unused Flip Flop:     951  out of   1162    81%  
+   Number with an unused LUT:            51  out of   1162     4%  
+   Number of fully used LUT-FF pairs:   160  out of   1162    13%  
+   Number of unique control sets:        23
+
+IO Utilization: 
+ Number of IOs:                          14
+ Number of bonded IOBs:                  13  out of    200     6%  
+    IOB Flip Flops/Latches:               6
+
+Specific Feature Utilization:
+ Number of Block RAM/FIFO:                1  out of     32     3%  
+    Number using Block RAM only:          1
+ Number of BUFG/BUFGCTRLs:                4  out of     16    25%  
+
+---------------------------
+Partition Resource Summary:
+---------------------------
+
+  No Partitions were found in this design.
+
+---------------------------
+
+
+=========================================================================
+Timing Report
+
+NOTE: THESE TIMING NUMBERS ARE ONLY A SYNTHESIS ESTIMATE.
+      FOR ACCURATE TIMING INFORMATION PLEASE REFER TO THE TRACE REPORT
+      GENERATED AFTER PLACE-and-ROUTE.
+
+Clock Information:
+------------------
+-------------------------------------------------------------------------+-------------------------------------------+-------+
+Clock Signal                                                             | Clock buffer(FF name)                     | Load  |
+-------------------------------------------------------------------------+-------------------------------------------+-------+
+Clk_100MIn                                                               | BUFGP                                     | 1     |
+Clk_Div                                                                  | BUFG                                      | 68    |
+SSPIF(ReadNoise/SSPIF11:O)                                               | NONE(*)(LED_Blink_0)                      | 15    |
+ReadNoise/ResetEN_inv(ReadNoise/ResetEN_inv11:O)                         | NONE(*)(ReadNoise/ShiftCount_3)           | 4     |
+ReadNoise/SSPTx(ReadNoise/SSPTx11:O)                                     | NONE(*)(ReadNoise/DataOut_reg_10)         | 16    |
+ReadNoise/ResetEN(ReadNoise/ResetEN11:O)                                 | NONE(*)(ReadNoise/bitShiftReg_9)          | 13    |
+ControlBlock/ControlClk(ControlBlock/ControlClk1:O)                      | NONE(*)(ControlBlock/ControlReg_9)        | 10    |
+ControlBlock/FiltClk(ControlBlock/FiltClk:O)                             | NONE(*)(ControlBlock/FilterEN_reg)        | 1     |
+ControlBlock/DataClk(ControlBlock/DataClk:O)                             | NONE(*)(ControlBlock/RAMDataEN_reg)       | 1     |
+DataMemBlock/Clk(DataMemBlock/Clk1:O)                                    | NONE(*)(DataMemBlock/Control_1)           | 8     |
+ControlBlock/RAMDataEN_reg                                               | NONE(DataMemBlock/SPIData_reg_10)         | 10    |
+AdaptBlock/Clk(CoefMemBlock/Clk1:O)                                      | BUFG(*)(CoefMemBlock/CoefControl_1)       | 20    |
+AdaptBlock/Data_write(AdaptBlock/Data_write1:O)                          | NONE(*)(AdaptBlock/WzNew_reg_10)          | 11    |
+ControlBlock/FilterEN_reg                                                | NONE(FilterBlock/FiltSum_10)              | 11    |
+SaturationBlock/Filtcmplt_detected(SaturationBlock/Filtcmplt_detected1:O)| NONE(*)(SaturationBlock/Err_reg_10)       | 11    |
+FiltComplete(CoefMemBlock/FiltComplete1:O)                               | BUFG(*)(SaturationBlock/ANCAudioOut_reg_9)| 20    |
+-------------------------------------------------------------------------+-------------------------------------------+-------+
+(*) These 12 clock signal(s) are generated by combinatorial logic,
+and XST is not able to identify which are the primary clock signals.
+Please use the CLOCK_SIGNAL constraint to specify the clock signal(s) generated by combinatorial logic.
+INFO:Xst:2169 - HDL ADVISOR - Some clock signals were not automatically buffered by XST with BUFG/BUFR resources. Please use the buffer_type constraint in order to insert these buffers to the clock signals to help prevent skew problems.
+
+Asynchronous Control Signals Information:
+----------------------------------------
+No asynchronous control signals found in this design
+
+Timing Summary:
+---------------
+Speed Grade: -2
+
+   Minimum period: 35.221ns (Maximum Frequency: 28.393MHz)
+   Minimum input arrival time before clock: 2.083ns
+   Maximum output required time after clock: 5.098ns
+   Maximum combinational path delay: No path found
+
+Timing Details:
+---------------
+All values displayed in nanoseconds (ns)
+
+=========================================================================
+Timing constraint: Default period analysis for Clock 'Clk_100MIn'
+  Clock period: 1.787ns (frequency: 559.597MHz)
+  Total number of paths / destination ports: 1 / 1
+-------------------------------------------------------------------------
+Delay:               1.787ns (Levels of Logic = 0)
+  Source:            Clk_Div (FF)
+  Destination:       Clk_Div (FF)
+  Source Clock:      Clk_100MIn rising
+  Destination Clock: Clk_100MIn rising
+
+  Data Path: Clk_Div to Clk_Div
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDR:C->Q              4   0.525   0.803  Clk_Div (Clk_Div)
+     FDR:R                     0.459          Clk_Div
+    ----------------------------------------
+    Total                      1.787ns (0.984ns logic, 0.803ns route)
+                                       (55.1% logic, 44.9% route)
+
+=========================================================================
+Timing constraint: Default period analysis for Clock 'Clk_Div'
+  Clock period: 35.221ns (frequency: 28.393MHz)
+  Total number of paths / destination ports: 2332821748 / 106
+-------------------------------------------------------------------------
+Delay:               17.610ns (Levels of Logic = 40)
+  Source:            DataMemBlock/DataRam/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/s6_init.ram/SP.WIDE_PRIM9.ram (RAM)
+  Destination:       FilterBlock/FiltNResult_19 (FF)
+  Source Clock:      Clk_Div rising
+  Destination Clock: Clk_Div falling
+
+  Data Path: DataMemBlock/DataRam/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/s6_init.ram/SP.WIDE_PRIM9.ram to FilterBlock/FiltNResult_19
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     RAMB8BWER:CLKAWRCLK->DOADO1   21   1.800   1.310  ramloop[0].ram.r/s6_init.ram/SP.WIDE_PRIM9.ram (DOUTA<1>)
+     end scope: 'DataMemBlock/DataRam/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr:DOUTA<1>'
+     end scope: 'DataMemBlock/DataRam:douta<1>'
+     LUT3:I2->O            2   0.254   0.954  FilterBlock/FilterMul/Mmux_a021 (FilterBlock/FilterMul/a0<1>)
+     LUT3:I0->O            1   0.235   0.682  FilterBlock/FilterMul/ADDERTREE_INTERNAL_Madd11 (FilterBlock/FilterMul/ADDERTREE_INTERNAL_Madd11)
+     LUT4:I3->O            1   0.254   0.000  FilterBlock/FilterMul/ADDERTREE_INTERNAL_Madd1_lut<0>2 (FilterBlock/FilterMul/ADDERTREE_INTERNAL_Madd1_lut<0>2)
+     MUXCY:S->O            1   0.215   0.000  FilterBlock/FilterMul/ADDERTREE_INTERNAL_Madd1_cy<0>_1 (FilterBlock/FilterMul/ADDERTREE_INTERNAL_Madd1_cy<0>2)
+     XORCY:CI->O           2   0.206   0.726  FilterBlock/FilterMul/ADDERTREE_INTERNAL_Madd1_xor<0>_2 (FilterBlock/FilterMul/ADDERTREE_INTERNAL_Madd_31)
+     LUT3:I2->O            1   0.254   0.682  FilterBlock/FilterMul/ADDERTREE_INTERNAL_Madd33 (FilterBlock/FilterMul/ADDERTREE_INTERNAL_Madd33)
+     LUT4:I3->O            1   0.254   0.000  FilterBlock/FilterMul/ADDERTREE_INTERNAL_Madd3_lut<0>4 (FilterBlock/FilterMul/ADDERTREE_INTERNAL_Madd3_lut<0>4)
+     MUXCY:S->O            1   0.215   0.000  FilterBlock/FilterMul/ADDERTREE_INTERNAL_Madd3_cy<0>_3 (FilterBlock/FilterMul/ADDERTREE_INTERNAL_Madd3_cy<0>4)
+     XORCY:CI->O           1   0.206   0.682  FilterBlock/FilterMul/ADDERTREE_INTERNAL_Madd3_xor<0>_4 (FilterBlock/FilterMul/ADDERTREE_INTERNAL_Madd_53)
+     LUT2:I1->O            1   0.254   0.000  FilterBlock/FilterMul/ADDERTREE_INTERNAL_Madd8_lut<5> (FilterBlock/FilterMul/ADDERTREE_INTERNAL_Madd8_lut<5>)
+     MUXCY:S->O            1   0.215   0.000  FilterBlock/FilterMul/ADDERTREE_INTERNAL_Madd8_cy<5> (FilterBlock/FilterMul/ADDERTREE_INTERNAL_Madd8_cy<5>)
+     XORCY:CI->O           3   0.206   0.994  FilterBlock/FilterMul/ADDERTREE_INTERNAL_Madd8_xor<6> (FilterBlock/FilterMul/ADDERTREE_INTERNAL_Madd_68)
+     LUT6:I3->O            3   0.235   0.766  FilterBlock/FilterAdd/Mmux_bb135_F (N87)
+     LUT3:I2->O            7   0.254   0.910  FilterBlock/FilterAdd/Mmux_bb1351_2 (FilterBlock/FilterAdd/Mmux_bb13511)
+     LUT6:I5->O           10   0.254   1.008  FilterBlock/FilterAdd/Mmux_bb136_1 (FilterBlock/FilterAdd/Mmux_bb136)
+     LUT6:I5->O            1   0.254   0.000  FilterBlock/FilterAdd/Mmux_addtemp_rs_lut<0> (FilterBlock/FilterAdd/Mmux_addtemp_rs_lut<0>)
+     MUXCY:S->O            1   0.215   0.000  FilterBlock/FilterAdd/Mmux_addtemp_rs_cy<0> (FilterBlock/FilterAdd/Mmux_addtemp_rs_cy<0>)
+     MUXCY:CI->O           1   0.023   0.000  FilterBlock/FilterAdd/Mmux_addtemp_rs_cy<1> (FilterBlock/FilterAdd/Mmux_addtemp_rs_cy<1>)
+     MUXCY:CI->O           1   0.023   0.000  FilterBlock/FilterAdd/Mmux_addtemp_rs_cy<2> (FilterBlock/FilterAdd/Mmux_addtemp_rs_cy<2>)
+     MUXCY:CI->O           1   0.023   0.000  FilterBlock/FilterAdd/Mmux_addtemp_rs_cy<3> (FilterBlock/FilterAdd/Mmux_addtemp_rs_cy<3>)
+     MUXCY:CI->O           1   0.023   0.000  FilterBlock/FilterAdd/Mmux_addtemp_rs_cy<4> (FilterBlock/FilterAdd/Mmux_addtemp_rs_cy<4>)
+     MUXCY:CI->O           1   0.023   0.000  FilterBlock/FilterAdd/Mmux_addtemp_rs_cy<5> (FilterBlock/FilterAdd/Mmux_addtemp_rs_cy<5>)
+     MUXCY:CI->O           1   0.023   0.000  FilterBlock/FilterAdd/Mmux_addtemp_rs_cy<6> (FilterBlock/FilterAdd/Mmux_addtemp_rs_cy<6>)
+     MUXCY:CI->O           1   0.023   0.000  FilterBlock/FilterAdd/Mmux_addtemp_rs_cy<7> (FilterBlock/FilterAdd/Mmux_addtemp_rs_cy<7>)
+     MUXCY:CI->O           1   0.023   0.000  FilterBlock/FilterAdd/Mmux_addtemp_rs_cy<8> (FilterBlock/FilterAdd/Mmux_addtemp_rs_cy<8>)
+     MUXCY:CI->O           1   0.023   0.000  FilterBlock/FilterAdd/Mmux_addtemp_rs_cy<9> (FilterBlock/FilterAdd/Mmux_addtemp_rs_cy<9>)
+     MUXCY:CI->O           1   0.023   0.000  FilterBlock/FilterAdd/Mmux_addtemp_rs_cy<10> (FilterBlock/FilterAdd/Mmux_addtemp_rs_cy<10>)
+     MUXCY:CI->O           1   0.023   0.000  FilterBlock/FilterAdd/Mmux_addtemp_rs_cy<11> (FilterBlock/FilterAdd/Mmux_addtemp_rs_cy<11>)
+     MUXCY:CI->O           1   0.023   0.000  FilterBlock/FilterAdd/Mmux_addtemp_rs_cy<12> (FilterBlock/FilterAdd/Mmux_addtemp_rs_cy<12>)
+     MUXCY:CI->O           1   0.023   0.000  FilterBlock/FilterAdd/Mmux_addtemp_rs_cy<13> (FilterBlock/FilterAdd/Mmux_addtemp_rs_cy<13>)
+     MUXCY:CI->O           1   0.023   0.000  FilterBlock/FilterAdd/Mmux_addtemp_rs_cy<14> (FilterBlock/FilterAdd/Mmux_addtemp_rs_cy<14>)
+     MUXCY:CI->O           1   0.023   0.000  FilterBlock/FilterAdd/Mmux_addtemp_rs_cy<15> (FilterBlock/FilterAdd/Mmux_addtemp_rs_cy<15>)
+     MUXCY:CI->O           1   0.023   0.000  FilterBlock/FilterAdd/Mmux_addtemp_rs_cy<16> (FilterBlock/FilterAdd/Mmux_addtemp_rs_cy<16>)
+     MUXCY:CI->O           1   0.023   0.000  FilterBlock/FilterAdd/Mmux_addtemp_rs_cy<17> (FilterBlock/FilterAdd/Mmux_addtemp_rs_cy<17>)
+     XORCY:CI->O           2   0.206   0.725  FilterBlock/FilterAdd/Mmux_addtemp_rs_xor<18> (FilterBlock/FilterAdd/addtemp<18>)
+     INV:I->O              1   0.255   0.000  FilterBlock/FilterAdd/n0052<18>1_INV_0 (FilterBlock/FilterAdd/n0052<18>)
+     MUXCY:S->O            0   0.215   0.000  FilterBlock/FilterAdd/Madd_addtemp[19]_GND_10_o_add_15_OUT_cy<18> (FilterBlock/FilterAdd/Madd_addtemp[19]_GND_10_o_add_15_OUT_cy<18>)
+     XORCY:CI->O           1   0.206   0.790  FilterBlock/FilterAdd/Madd_addtemp[19]_GND_10_o_add_15_OUT_xor<19> (FilterBlock/FilterAdd/addtemp[19]_GND_10_o_add_15_OUT<19>)
+     LUT6:I4->O            1   0.250   0.000  FilterBlock/Mmux_FiltNResult_loc[20]_FiltSum_AddResult[20]_mux_7_OUT111 (FilterBlock/FiltNResult_loc[20]_FiltSum_AddResult[20]_mux_7_OUT<19>)
+     FD_1:D                    0.074          FilterBlock/FiltNResult_19
+    ----------------------------------------
+    Total                     17.610ns (7.381ns logic, 10.229ns route)
+                                       (41.9% logic, 58.1% route)
+
+=========================================================================
+Timing constraint: Default period analysis for Clock 'SSPIF'
+  Clock period: 2.258ns (frequency: 442.821MHz)
+  Total number of paths / destination ports: 120 / 15
+-------------------------------------------------------------------------
+Delay:               2.258ns (Levels of Logic = 16)
+  Source:            LED_Blink_0 (FF)
+  Destination:       LED_Blink_14 (FF)
+  Source Clock:      SSPIF rising
+  Destination Clock: SSPIF rising
+
+  Data Path: LED_Blink_0 to LED_Blink_14
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FD:C->Q               1   0.525   0.681  LED_Blink_0 (LED_Blink_0)
+     INV:I->O              1   0.255   0.000  Mcount_LED_Blink_lut<0>_INV_0 (Mcount_LED_Blink_lut<0>)
+     MUXCY:S->O            1   0.215   0.000  Mcount_LED_Blink_cy<0> (Mcount_LED_Blink_cy<0>)
+     MUXCY:CI->O           1   0.023   0.000  Mcount_LED_Blink_cy<1> (Mcount_LED_Blink_cy<1>)
+     MUXCY:CI->O           1   0.023   0.000  Mcount_LED_Blink_cy<2> (Mcount_LED_Blink_cy<2>)
+     MUXCY:CI->O           1   0.023   0.000  Mcount_LED_Blink_cy<3> (Mcount_LED_Blink_cy<3>)
+     MUXCY:CI->O           1   0.023   0.000  Mcount_LED_Blink_cy<4> (Mcount_LED_Blink_cy<4>)
+     MUXCY:CI->O           1   0.023   0.000  Mcount_LED_Blink_cy<5> (Mcount_LED_Blink_cy<5>)
+     MUXCY:CI->O           1   0.023   0.000  Mcount_LED_Blink_cy<6> (Mcount_LED_Blink_cy<6>)
+     MUXCY:CI->O           1   0.023   0.000  Mcount_LED_Blink_cy<7> (Mcount_LED_Blink_cy<7>)
+     MUXCY:CI->O           1   0.023   0.000  Mcount_LED_Blink_cy<8> (Mcount_LED_Blink_cy<8>)
+     MUXCY:CI->O           1   0.023   0.000  Mcount_LED_Blink_cy<9> (Mcount_LED_Blink_cy<9>)
+     MUXCY:CI->O           1   0.023   0.000  Mcount_LED_Blink_cy<10> (Mcount_LED_Blink_cy<10>)
+     MUXCY:CI->O           1   0.023   0.000  Mcount_LED_Blink_cy<11> (Mcount_LED_Blink_cy<11>)
+     MUXCY:CI->O           1   0.023   0.000  Mcount_LED_Blink_cy<12> (Mcount_LED_Blink_cy<12>)
+     MUXCY:CI->O           0   0.023   0.000  Mcount_LED_Blink_cy<13> (Mcount_LED_Blink_cy<13>)
+     XORCY:CI->O           1   0.206   0.000  Mcount_LED_Blink_xor<14> (Result<14>)
+     FD:D                      0.074          LED_Blink_14
+    ----------------------------------------
+    Total                      2.258ns (1.577ns logic, 0.681ns route)
+                                       (69.8% logic, 30.2% route)
+
+=========================================================================
+Timing constraint: Default period analysis for Clock 'ReadNoise/ResetEN_inv'
+  Clock period: 2.410ns (frequency: 414.938MHz)
+  Total number of paths / destination ports: 10 / 4
+-------------------------------------------------------------------------
+Delay:               2.410ns (Levels of Logic = 1)
+  Source:            ReadNoise/ShiftCount_0 (FF)
+  Destination:       ReadNoise/ShiftCount_0 (FF)
+  Source Clock:      ReadNoise/ResetEN_inv rising
+  Destination Clock: ReadNoise/ResetEN_inv rising
+
+  Data Path: ReadNoise/ShiftCount_0 to ReadNoise/ShiftCount_0
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDR:C->Q              6   0.525   0.875  ReadNoise/ShiftCount_0 (ReadNoise/ShiftCount_0)
+     INV:I->O              1   0.255   0.681  ReadNoise/Mcount_ShiftCount_xor<0>11_INV_0 (ReadNoise/Result<0>)
+     FDR:D                     0.074          ReadNoise/ShiftCount_0
+    ----------------------------------------
+    Total                      2.410ns (0.854ns logic, 1.556ns route)
+                                       (35.4% logic, 64.6% route)
+
+=========================================================================
+Timing constraint: Default period analysis for Clock 'ReadNoise/ResetEN'
+  Clock period: 1.820ns (frequency: 549.451MHz)
+  Total number of paths / destination ports: 11 / 11
+-------------------------------------------------------------------------
+Delay:               1.820ns (Levels of Logic = 0)
+  Source:            ReadNoise/Mshreg_bitShiftReg_15 (FF)
+  Destination:       ReadNoise/bitShiftReg_15 (FF)
+  Source Clock:      ReadNoise/ResetEN falling
+  Destination Clock: ReadNoise/ResetEN falling
+
+  Data Path: ReadNoise/Mshreg_bitShiftReg_15 to ReadNoise/bitShiftReg_15
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     SRLC16E:CLK->Q        1   1.746   0.000  ReadNoise/Mshreg_bitShiftReg_15 (ReadNoise/Mshreg_bitShiftReg_15)
+     FDE:D                     0.074          ReadNoise/bitShiftReg_15
+    ----------------------------------------
+    Total                      1.820ns (1.820ns logic, 0.000ns route)
+                                       (100.0% logic, 0.0% route)
+
+=========================================================================
+Timing constraint: Default period analysis for Clock 'ControlBlock/ControlClk'
+  Clock period: 2.301ns (frequency: 434.594MHz)
+  Total number of paths / destination ports: 55 / 10
+-------------------------------------------------------------------------
+Delay:               2.301ns (Levels of Logic = 11)
+  Source:            ControlBlock/ControlReg_0 (FF)
+  Destination:       ControlBlock/ControlReg_9 (FF)
+  Source Clock:      ControlBlock/ControlClk rising
+  Destination Clock: ControlBlock/ControlClk rising
+
+  Data Path: ControlBlock/ControlReg_0 to ControlBlock/ControlReg_9
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDR:C->Q              5   0.525   0.840  ControlBlock/ControlReg_0 (ControlBlock/ControlReg_0)
+     INV:I->O              1   0.255   0.000  ControlBlock/Mcount_ControlReg_lut<0>_INV_0 (ControlBlock/Mcount_ControlReg_lut<0>)
+     MUXCY:S->O            1   0.215   0.000  ControlBlock/Mcount_ControlReg_cy<0> (ControlBlock/Mcount_ControlReg_cy<0>)
+     MUXCY:CI->O           1   0.023   0.000  ControlBlock/Mcount_ControlReg_cy<1> (ControlBlock/Mcount_ControlReg_cy<1>)
+     MUXCY:CI->O           1   0.023   0.000  ControlBlock/Mcount_ControlReg_cy<2> (ControlBlock/Mcount_ControlReg_cy<2>)
+     MUXCY:CI->O           1   0.023   0.000  ControlBlock/Mcount_ControlReg_cy<3> (ControlBlock/Mcount_ControlReg_cy<3>)
+     MUXCY:CI->O           1   0.023   0.000  ControlBlock/Mcount_ControlReg_cy<4> (ControlBlock/Mcount_ControlReg_cy<4>)
+     MUXCY:CI->O           1   0.023   0.000  ControlBlock/Mcount_ControlReg_cy<5> (ControlBlock/Mcount_ControlReg_cy<5>)
+     MUXCY:CI->O           1   0.023   0.000  ControlBlock/Mcount_ControlReg_cy<6> (ControlBlock/Mcount_ControlReg_cy<6>)
+     MUXCY:CI->O           1   0.023   0.000  ControlBlock/Mcount_ControlReg_cy<7> (ControlBlock/Mcount_ControlReg_cy<7>)
+     MUXCY:CI->O           0   0.023   0.000  ControlBlock/Mcount_ControlReg_cy<8> (ControlBlock/Mcount_ControlReg_cy<8>)
+     XORCY:CI->O           1   0.206   0.000  ControlBlock/Mcount_ControlReg_xor<9> (ControlBlock/Result<9>)
+     FDR:D                     0.074          ControlBlock/ControlReg_9
+    ----------------------------------------
+    Total                      2.301ns (1.461ns logic, 0.840ns route)
+                                       (63.5% logic, 36.5% route)
+
+=========================================================================
+Timing constraint: Default period analysis for Clock 'DataMemBlock/Clk'
+  Clock period: 2.556ns (frequency: 391.313MHz)
+  Total number of paths / destination ports: 36 / 8
+-------------------------------------------------------------------------
+Delay:               2.556ns (Levels of Logic = 5)
+  Source:            DataMemBlock/Control_4 (FF)
+  Destination:       DataMemBlock/Control_7 (FF)
+  Source Clock:      DataMemBlock/Clk rising
+  Destination Clock: DataMemBlock/Clk rising
+
+  Data Path: DataMemBlock/Control_4 to DataMemBlock/Control_7
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDS:C->Q             18   0.525   1.234  DataMemBlock/Control_4 (DataMemBlock/Control_4)
+     INV:I->O              1   0.255   0.000  DataMemBlock/Mcount_Control_lut<4>_INV_0 (DataMemBlock/Mcount_Control_lut<4>)
+     MUXCY:S->O            1   0.215   0.000  DataMemBlock/Mcount_Control_cy<4> (DataMemBlock/Mcount_Control_cy<4>)
+     MUXCY:CI->O           1   0.023   0.000  DataMemBlock/Mcount_Control_cy<5> (DataMemBlock/Mcount_Control_cy<5>)
+     MUXCY:CI->O           0   0.023   0.000  DataMemBlock/Mcount_Control_cy<6> (DataMemBlock/Mcount_Control_cy<6>)
+     XORCY:CI->O           1   0.206   0.000  DataMemBlock/Mcount_Control_xor<7> (DataMemBlock/Result<7>)
+     FDS:D                     0.074          DataMemBlock/Control_7
+    ----------------------------------------
+    Total                      2.556ns (1.322ns logic, 1.234ns route)
+                                       (51.7% logic, 48.3% route)
+
+=========================================================================
+Timing constraint: Default period analysis for Clock 'AdaptBlock/Clk'
+  Clock period: 2.448ns (frequency: 408.580MHz)
+  Total number of paths / destination ports: 37 / 9
+-------------------------------------------------------------------------
+Delay:               2.448ns (Levels of Logic = 5)
+  Source:            CoefMemBlock/CoefControl_4 (FF)
+  Destination:       CoefMemBlock/CoefControl_7 (FF)
+  Source Clock:      AdaptBlock/Clk rising
+  Destination Clock: AdaptBlock/Clk rising
+
+  Data Path: CoefMemBlock/CoefControl_4 to CoefMemBlock/CoefControl_7
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDS:C->Q             14   0.525   1.126  CoefMemBlock/CoefControl_4 (CoefMemBlock/CoefControl_4)
+     INV:I->O              1   0.255   0.000  CoefMemBlock/Mcount_CoefControl_lut<4>_INV_0 (CoefMemBlock/Mcount_CoefControl_lut<4>)
+     MUXCY:S->O            1   0.215   0.000  CoefMemBlock/Mcount_CoefControl_cy<4> (CoefMemBlock/Mcount_CoefControl_cy<4>)
+     MUXCY:CI->O           1   0.023   0.000  CoefMemBlock/Mcount_CoefControl_cy<5> (CoefMemBlock/Mcount_CoefControl_cy<5>)
+     MUXCY:CI->O           0   0.023   0.000  CoefMemBlock/Mcount_CoefControl_cy<6> (CoefMemBlock/Mcount_CoefControl_cy<6>)
+     XORCY:CI->O           1   0.206   0.000  CoefMemBlock/Mcount_CoefControl_xor<7> (CoefMemBlock/Result<7>)
+     FDS:D                     0.074          CoefMemBlock/CoefControl_7
+    ----------------------------------------
+    Total                      2.448ns (1.322ns logic, 1.126ns route)
+                                       (54.0% logic, 46.0% route)
+
+=========================================================================
+Timing constraint: Default OFFSET IN BEFORE for Clock 'ReadNoise/ResetEN'
+  Total number of paths / destination ports: 1 / 1
+-------------------------------------------------------------------------
+Offset:              2.083ns (Levels of Logic = 1)
+  Source:            SDI (PAD)
+  Destination:       ReadNoise/bitShiftReg_0 (FF)
+  Destination Clock: ReadNoise/ResetEN falling
+
+  Data Path: SDI to ReadNoise/bitShiftReg_0
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     IBUF:I->O             1   1.328   0.681  SDI_IBUF (SDI_IBUF)
+     FDE_1:D                   0.074          ReadNoise/bitShiftReg_0
+    ----------------------------------------
+    Total                      2.083ns (1.402ns logic, 0.681ns route)
+                                       (67.3% logic, 32.7% route)
+
+=========================================================================
+Timing constraint: Default OFFSET OUT AFTER for Clock 'ReadNoise/SSPTx'
+  Total number of paths / destination ports: 6 / 6
+-------------------------------------------------------------------------
+Offset:              4.118ns (Levels of Logic = 1)
+  Source:            ReadNoise/DataOut_reg_8_1 (FF)
+  Destination:       SPIDataLED<5> (PAD)
+  Source Clock:      ReadNoise/SSPTx rising
+
+  Data Path: ReadNoise/DataOut_reg_8_1 to SPIDataLED<5>
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDR:C->Q              1   0.525   0.681  ReadNoise/DataOut_reg_8_1 (ReadNoise/DataOut_reg_8_1)
+     OBUF:I->O                 2.912          SPIDataLED_5_OBUF (SPIDataLED<5>)
+    ----------------------------------------
+    Total                      4.118ns (3.437ns logic, 0.681ns route)
+                                       (83.5% logic, 16.5% route)
+
+=========================================================================
+Timing constraint: Default OFFSET OUT AFTER for Clock 'ReadNoise/ResetEN'
+  Total number of paths / destination ports: 1 / 1
+-------------------------------------------------------------------------
+Offset:              4.118ns (Levels of Logic = 1)
+  Source:            ReadNoise/bitShiftReg_15 (FF)
+  Destination:       SDO (PAD)
+  Source Clock:      ReadNoise/ResetEN falling
+
+  Data Path: ReadNoise/bitShiftReg_15 to SDO
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDE:C->Q              1   0.525   0.681  ReadNoise/bitShiftReg_15 (ReadNoise/bitShiftReg_15)
+     OBUF:I->O                 2.912          SDO_OBUF (SDO)
+    ----------------------------------------
+    Total                      4.118ns (3.437ns logic, 0.681ns route)
+                                       (83.5% logic, 16.5% route)
+
+=========================================================================
+Timing constraint: Default OFFSET OUT AFTER for Clock 'Clk_Div'
+  Total number of paths / destination ports: 2 / 2
+-------------------------------------------------------------------------
+Offset:              5.098ns (Levels of Logic = 2)
+  Source:            PWMBlock/PWM_FF/Q1 (FF)
+  Destination:       AudioL (PAD)
+  Source Clock:      Clk_Div rising
+
+  Data Path: PWMBlock/PWM_FF/Q1 to AudioL
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDE:C->Q              1   0.525   0.681  PWMBlock/PWM_FF/Q1 (PWMBlock/PWM_FF/Q1)
+     INV:I->O              2   0.255   0.725  AudioL1_INV_0 (AudioR_OBUF)
+     OBUF:I->O                 2.912          AudioL_OBUF (AudioL)
+    ----------------------------------------
+    Total                      5.098ns (3.692ns logic, 1.406ns route)
+                                       (72.4% logic, 27.6% route)
+
+=========================================================================
+Timing constraint: Default OFFSET OUT AFTER for Clock 'SSPIF'
+  Total number of paths / destination ports: 1 / 1
+-------------------------------------------------------------------------
+Offset:              4.162ns (Levels of Logic = 1)
+  Source:            LED_Blink_14 (FF)
+  Destination:       SPI_LED (PAD)
+  Source Clock:      SSPIF rising
+
+  Data Path: LED_Blink_14 to SPI_LED
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FD:C->Q               2   0.525   0.725  LED_Blink_14 (LED_Blink_14)
+     OBUF:I->O                 2.912          SPI_LED_OBUF (SPI_LED)
+    ----------------------------------------
+    Total                      4.162ns (3.437ns logic, 0.725ns route)
+                                       (82.6% logic, 17.4% route)
+
+=========================================================================
+
+Cross Clock Domains Report:
+--------------------------
+
+Clock to Setup on destination clock AdaptBlock/Clk
+--------------------+---------+---------+---------+---------+
+                    | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock        |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+--------------------+---------+---------+---------+---------+
+AdaptBlock/Clk      |    2.448|         |         |         |
+Clk_Div             |         |    3.917|    3.110|         |
+ControlBlock/FiltClk|         |         |    3.405|         |
+--------------------+---------+---------+---------+---------+
+
+Clock to Setup on destination clock AdaptBlock/Data_write
+----------------------------------+---------+---------+---------+---------+
+                                  | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock                      |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+----------------------------------+---------+---------+---------+---------+
+AdaptBlock/Clk                    |         |    9.347|         |         |
+Clk_Div                           |   20.790|         |         |         |
+ControlBlock/FiltClk              |   20.752|         |         |         |
+SaturationBlock/Filtcmplt_detected|         |   19.417|         |         |
+----------------------------------+---------+---------+---------+---------+
+
+Clock to Setup on destination clock Clk_100MIn
+---------------+---------+---------+---------+---------+
+               | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+---------------+---------+---------+---------+---------+
+Clk_100MIn     |    1.787|         |         |         |
+---------------+---------+---------+---------+---------+
+
+Clock to Setup on destination clock Clk_Div
+--------------------------+---------+---------+---------+---------+
+                          | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock              |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+--------------------------+---------+---------+---------+---------+
+AdaptBlock/Clk            |    3.163|         |    3.563|         |
+AdaptBlock/Data_write     |    3.548|         |   16.273|         |
+Clk_Div                   |    5.408|    4.700|   17.610|         |
+ControlBlock/DataClk      |    3.039|         |    1.725|         |
+ControlBlock/FiltClk      |    7.285|         |   17.577|         |
+ControlBlock/RAMDataEN_reg|    2.718|         |         |         |
+DataMemBlock/Clk          |    8.063|         |         |         |
+FiltComplete              |    5.393|         |         |         |
+ReadNoise/ResetEN_inv     |         |         |    2.005|         |
+--------------------------+---------+---------+---------+---------+
+
+Clock to Setup on destination clock ControlBlock/ControlClk
+-----------------------+---------+---------+---------+---------+
+                       | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock           |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+-----------------------+---------+---------+---------+---------+
+Clk_Div                |    3.075|    3.949|         |         |
+ControlBlock/ControlClk|    2.301|         |         |         |
+-----------------------+---------+---------+---------+---------+
+
+Clock to Setup on destination clock ControlBlock/DataClk
+-----------------------+---------+---------+---------+---------+
+                       | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock           |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+-----------------------+---------+---------+---------+---------+
+Clk_Div                |         |    3.711|         |         |
+ControlBlock/ControlClk|    4.126|         |         |         |
+-----------------------+---------+---------+---------+---------+
+
+Clock to Setup on destination clock ControlBlock/FiltClk
+-----------------------+---------+---------+---------+---------+
+                       | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock           |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+-----------------------+---------+---------+---------+---------+
+Clk_Div                |         |    3.711|         |         |
+ControlBlock/ControlClk|    5.160|         |         |         |
+-----------------------+---------+---------+---------+---------+
+
+Clock to Setup on destination clock ControlBlock/FilterEN_reg
+---------------+---------+---------+---------+---------+
+               | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+---------------+---------+---------+---------+---------+
+Clk_Div        |         |         |    1.474|         |
+---------------+---------+---------+---------+---------+
+
+Clock to Setup on destination clock ControlBlock/RAMDataEN_reg
+---------------+---------+---------+---------+---------+
+               | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+---------------+---------+---------+---------+---------+
+Clk_Div        |         |    2.687|         |         |
+ReadNoise/SSPTx|    1.324|         |         |         |
+---------------+---------+---------+---------+---------+
+
+Clock to Setup on destination clock DataMemBlock/Clk
+----------------+---------+---------+---------+---------+
+                | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock    |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+----------------+---------+---------+---------+---------+
+Clk_Div         |         |    4.094|         |         |
+DataMemBlock/Clk|    2.556|         |         |         |
+----------------+---------+---------+---------+---------+
+
+Clock to Setup on destination clock FiltComplete
+-------------------------+---------+---------+---------+---------+
+                         | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock             |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+-------------------------+---------+---------+---------+---------+
+ControlBlock/FilterEN_reg|         |    1.933|         |         |
+ReadNoise/SSPTx          |    1.324|         |         |         |
+-------------------------+---------+---------+---------+---------+
+
+Clock to Setup on destination clock ReadNoise/ResetEN
+-----------------+---------+---------+---------+---------+
+                 | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock     |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+-----------------+---------+---------+---------+---------+
+Clk_Div          |         |    2.302|    3.939|         |
+ReadNoise/ResetEN|         |         |    1.820|         |
+-----------------+---------+---------+---------+---------+
+
+Clock to Setup on destination clock ReadNoise/ResetEN_inv
+---------------------+---------+---------+---------+---------+
+                     | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock         |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+---------------------+---------+---------+---------+---------+
+ReadNoise/ResetEN    |    1.787|         |         |         |
+ReadNoise/ResetEN_inv|    2.410|         |         |         |
+---------------------+---------+---------+---------+---------+
+
+Clock to Setup on destination clock ReadNoise/SSPTx
+-----------------+---------+---------+---------+---------+
+                 | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock     |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+-----------------+---------+---------+---------+---------+
+Clk_Div          |         |    2.687|         |         |
+ReadNoise/ResetEN|         |    2.260|         |         |
+-----------------+---------+---------+---------+---------+
+
+Clock to Setup on destination clock SSPIF
+---------------+---------+---------+---------+---------+
+               | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+---------------+---------+---------+---------+---------+
+SSPIF          |    2.258|         |         |         |
+---------------+---------+---------+---------+---------+
+
+Clock to Setup on destination clock SaturationBlock/Filtcmplt_detected
+---------------+---------+---------+---------+---------+
+               | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+---------------+---------+---------+---------+---------+
+Clk_Div        |         |         |    2.022|         |
+FiltComplete   |         |         |    9.344|         |
+---------------+---------+---------+---------+---------+
+
+=========================================================================
+
+
+Total REAL time to Xst completion: 14.00 secs
+Total CPU time to Xst completion: 13.54 secs
+ 
+--> 
+
+Total memory usage is 248536 kilobytes
+
+Number of errors   :    0 (   0 filtered)
+Number of warnings :    8 (   0 filtered)
+Number of infos    :    3 (   0 filtered)
+

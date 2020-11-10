@@ -1,0 +1,486 @@
+Release 14.1 - xst P.15xf (nt64)
+Copyright (c) 1995-2012 Xilinx, Inc.  All rights reserved.
+--> Parameter TMPDIR set to xst/projnav.tmp
+
+
+Total REAL time to Xst completion: 0.00 secs
+Total CPU time to Xst completion: 0.13 secs
+ 
+--> Parameter xsthdpdir set to xst
+
+
+Total REAL time to Xst completion: 1.00 secs
+Total CPU time to Xst completion: 0.14 secs
+ 
+--> Reading design: ANCCoefMem_V.prj
+
+TABLE OF CONTENTS
+  1) Synthesis Options Summary
+  2) HDL Parsing
+  3) HDL Elaboration
+  4) HDL Synthesis
+       4.1) HDL Synthesis Report
+  5) Advanced HDL Synthesis
+       5.1) Advanced HDL Synthesis Report
+  6) Low Level Synthesis
+  7) Partition Report
+  8) Design Summary
+       8.1) Primitive and Black Box Usage
+       8.2) Device utilization summary
+       8.3) Partition Resource Summary
+       8.4) Timing Report
+            8.4.1) Clock Information
+            8.4.2) Asynchronous Control Signals Information
+            8.4.3) Timing Summary
+            8.4.4) Timing Details
+            8.4.5) Cross Clock Domains Report
+
+
+=========================================================================
+*                      Synthesis Options Summary                        *
+=========================================================================
+---- Source Parameters
+Input File Name                    : "ANCCoefMem_V.prj"
+Ignore Synthesis Constraint File   : NO
+
+---- Target Parameters
+Output File Name                   : "ANCCoefMem_V"
+Output Format                      : NGC
+Target Device                      : xc6slx9-2-csg324
+
+---- Source Options
+Top Module Name                    : ANCCoefMem_V
+Automatic FSM Extraction           : YES
+FSM Encoding Algorithm             : Auto
+Safe Implementation                : No
+FSM Style                          : LUT
+RAM Extraction                     : Yes
+RAM Style                          : Auto
+ROM Extraction                     : Yes
+Shift Register Extraction          : YES
+ROM Style                          : Auto
+Resource Sharing                   : YES
+Asynchronous To Synchronous        : NO
+Shift Register Minimum Size        : 2
+Use DSP Block                      : Auto
+Automatic Register Balancing       : No
+
+---- Target Options
+LUT Combining                      : Auto
+Reduce Control Sets                : Auto
+Add IO Buffers                     : YES
+Global Maximum Fanout              : 100000
+Add Generic Clock Buffer(BUFG)     : 16
+Register Duplication               : YES
+Optimize Instantiated Primitives   : NO
+Use Clock Enable                   : Auto
+Use Synchronous Set                : Auto
+Use Synchronous Reset              : Auto
+Pack IO Registers into IOBs        : Auto
+Equivalent register Removal        : YES
+
+---- General Options
+Optimization Goal                  : Speed
+Optimization Effort                : 1
+Power Reduction                    : NO
+Keep Hierarchy                     : No
+Netlist Hierarchy                  : As_Optimized
+RTL Output                         : Yes
+Global Optimization                : AllClockNets
+Read Cores                         : YES
+Write Timing Constraints           : NO
+Cross Clock Analysis               : NO
+Hierarchy Separator                : /
+Bus Delimiter                      : <>
+Case Specifier                     : Maintain
+Slice Utilization Ratio            : 100
+BRAM Utilization Ratio             : 100
+DSP48 Utilization Ratio            : 100
+Auto BRAM Packing                  : NO
+Slice Utilization Ratio Delta      : 5
+
+---- Other Options
+Cores Search Directories           : {"ipcore_dir"  }
+
+=========================================================================
+
+
+=========================================================================
+*                          HDL Parsing                                  *
+=========================================================================
+Analyzing Verilog file "X:\0_xlinx_ISE\ANC_Top_2.0\ipcore_dir\BlockRam.v" into library work
+Parsing module <BlockRam>.
+Analyzing Verilog file "X:\0_xlinx_ISE\ANC_Top_2.0\ANCCoefMem_V.v" into library work
+Parsing module <ANCCoefMem_V>.
+
+=========================================================================
+*                            HDL Elaboration                            *
+=========================================================================
+
+Elaborating module <ANCCoefMem_V>.
+
+Elaborating module <BlockRam>.
+WARNING:HDLCompiler:1499 - "X:\0_xlinx_ISE\ANC_Top_2.0\ipcore_dir\BlockRam.v" Line 39: Empty module <BlockRam> remains a black box.
+
+=========================================================================
+*                           HDL Synthesis                               *
+=========================================================================
+
+Synthesizing Unit <ANCCoefMem_V>.
+    Related source file is "X:\0_xlinx_ISE\ANC_Top_2.0\ANCCoefMem_V.v".
+    Found 8-bit register for signal <CoefControl>.
+    Found 1-bit register for signal <FiltENOld>.
+    Found 8-bit subtractor for signal <CoefControl[7]_GND_1_o_sub_7_OUT> created at line 76.
+    Summary:
+	inferred   1 Adder/Subtractor(s).
+	inferred   9 D-type flip-flop(s).
+	inferred   3 Multiplexer(s).
+Unit <ANCCoefMem_V> synthesized.
+
+=========================================================================
+HDL Synthesis Report
+
+Macro Statistics
+# Adders/Subtractors                                   : 1
+ 8-bit subtractor                                      : 1
+# Registers                                            : 2
+ 1-bit register                                        : 1
+ 8-bit register                                        : 1
+# Multiplexers                                         : 3
+ 11-bit 2-to-1 multiplexer                             : 1
+ 16-bit 2-to-1 multiplexer                             : 1
+ 7-bit 2-to-1 multiplexer                              : 1
+
+=========================================================================
+
+=========================================================================
+*                       Advanced HDL Synthesis                          *
+=========================================================================
+
+Reading core <ipcore_dir/BlockRam.ngc>.
+Loading core <BlockRam> for timing and area information for instance <CoefRam>.
+
+Synthesizing (advanced) Unit <ANCCoefMem_V>.
+The following registers are absorbed into counter <CoefControl>: 1 register on signal <CoefControl>.
+Unit <ANCCoefMem_V> synthesized (advanced).
+
+=========================================================================
+Advanced HDL Synthesis Report
+
+Macro Statistics
+# Counters                                             : 1
+ 8-bit down counter                                    : 1
+# Registers                                            : 1
+ Flip-Flops                                            : 1
+# Multiplexers                                         : 3
+ 11-bit 2-to-1 multiplexer                             : 1
+ 16-bit 2-to-1 multiplexer                             : 1
+ 7-bit 2-to-1 multiplexer                              : 1
+
+=========================================================================
+
+=========================================================================
+*                         Low Level Synthesis                           *
+=========================================================================
+
+Optimizing unit <ANCCoefMem_V> ...
+
+Mapping all equations...
+Building and optimizing final netlist ...
+Found area constraint ratio of 100 (+ 5) on block ANCCoefMem_V, actual ratio is 0.
+
+Final Macro Processing ...
+
+=========================================================================
+Final Register Report
+
+Macro Statistics
+# Registers                                            : 9
+ Flip-Flops                                            : 9
+
+=========================================================================
+
+=========================================================================
+*                           Partition Report                            *
+=========================================================================
+
+Partition Implementation Status
+-------------------------------
+
+  No Partitions were found in this design.
+
+-------------------------------
+
+=========================================================================
+*                            Design Summary                             *
+=========================================================================
+
+Top Level Output File Name         : ANCCoefMem_V.ngc
+
+Primitive and Black Box Usage:
+------------------------------
+# BELS                             : 62
+#      GND                         : 3
+#      INV                         : 7
+#      LUT1                        : 1
+#      LUT2                        : 31
+#      LUT3                        : 2
+#      LUT6                        : 1
+#      MUXCY                       : 7
+#      VCC                         : 2
+#      XORCY                       : 8
+# FlipFlops/Latches                : 9
+#      FD_1                        : 1
+#      FDR                         : 3
+#      FDS                         : 5
+# RAMS                             : 1
+#      RAMB8BWER                   : 1
+# Clock Buffers                    : 1
+#      BUFG                        : 1
+# IO Buffers                       : 26
+#      IBUF                        : 14
+#      OBUF                        : 12
+
+Device utilization summary:
+---------------------------
+
+Selected Device : 6slx9csg324-2 
+
+
+Slice Logic Utilization: 
+ Number of Slice Registers:               9  out of  11440     0%  
+ Number of Slice LUTs:                   42  out of   5720     0%  
+    Number used as Logic:                42  out of   5720     0%  
+
+Slice Logic Distribution: 
+ Number of LUT Flip Flop pairs used:     42
+   Number with an unused Flip Flop:      33  out of     42    78%  
+   Number with an unused LUT:             0  out of     42     0%  
+   Number of fully used LUT-FF pairs:     9  out of     42    21%  
+   Number of unique control sets:         2
+
+IO Utilization: 
+ Number of IOs:                          26
+ Number of bonded IOBs:                  26  out of    200    13%  
+
+Specific Feature Utilization:
+ Number of Block RAM/FIFO:                1  out of     32     3%  
+    Number using Block RAM only:          1
+ Number of BUFG/BUFGCTRLs:                1  out of     16     6%  
+
+---------------------------
+Partition Resource Summary:
+---------------------------
+
+  No Partitions were found in this design.
+
+---------------------------
+
+
+=========================================================================
+Timing Report
+
+NOTE: THESE TIMING NUMBERS ARE ONLY A SYNTHESIS ESTIMATE.
+      FOR ACCURATE TIMING INFORMATION PLEASE REFER TO THE TRACE REPORT
+      GENERATED AFTER PLACE-and-ROUTE.
+
+Clock Information:
+------------------
+-----------------------------------+------------------------+-------+
+Clock Signal                       | Clock buffer(FF name)  | Load  |
+-----------------------------------+------------------------+-------+
+Clk_100M                           | IBUF+BUFG              | 2     |
+Clk(Clk1:O)                        | NONE(*)(CoefControl_0) | 8     |
+-----------------------------------+------------------------+-------+
+(*) This 1 clock signal(s) are generated by combinatorial logic,
+and XST is not able to identify which are the primary clock signals.
+Please use the CLOCK_SIGNAL constraint to specify the clock signal(s) generated by combinatorial logic.
+INFO:Xst:2169 - HDL ADVISOR - Some clock signals were not automatically buffered by XST with BUFG/BUFR resources. Please use the buffer_type constraint in order to insert these buffers to the clock signals to help prevent skew problems.
+
+Asynchronous Control Signals Information:
+----------------------------------------
+No asynchronous control signals found in this design
+
+Timing Summary:
+---------------
+Speed Grade: -2
+
+   Minimum period: 2.179ns (Maximum Frequency: 458.821MHz)
+   Minimum input arrival time before clock: 4.364ns
+   Maximum output required time after clock: 6.629ns
+   Maximum combinational path delay: 6.832ns
+
+Timing Details:
+---------------
+All values displayed in nanoseconds (ns)
+
+=========================================================================
+Timing constraint: Default period analysis for Clock 'Clk'
+  Clock period: 2.179ns (frequency: 458.821MHz)
+  Total number of paths / destination ports: 36 / 8
+-------------------------------------------------------------------------
+Delay:               2.179ns (Levels of Logic = 9)
+  Source:            CoefControl_0 (FF)
+  Destination:       CoefControl_7 (FF)
+  Source Clock:      Clk rising
+  Destination Clock: Clk rising
+
+  Data Path: CoefControl_0 to CoefControl_7
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDR:C->Q              3   0.525   0.766  CoefControl_0 (CoefControl_0)
+     LUT1:I0->O            1   0.254   0.000  Mcount_CoefControl_cy<0>_rt (Mcount_CoefControl_cy<0>_rt)
+     MUXCY:S->O            1   0.215   0.000  Mcount_CoefControl_cy<0> (Mcount_CoefControl_cy<0>)
+     MUXCY:CI->O           1   0.023   0.000  Mcount_CoefControl_cy<1> (Mcount_CoefControl_cy<1>)
+     MUXCY:CI->O           1   0.023   0.000  Mcount_CoefControl_cy<2> (Mcount_CoefControl_cy<2>)
+     MUXCY:CI->O           1   0.023   0.000  Mcount_CoefControl_cy<3> (Mcount_CoefControl_cy<3>)
+     MUXCY:CI->O           1   0.023   0.000  Mcount_CoefControl_cy<4> (Mcount_CoefControl_cy<4>)
+     MUXCY:CI->O           1   0.023   0.000  Mcount_CoefControl_cy<5> (Mcount_CoefControl_cy<5>)
+     MUXCY:CI->O           0   0.023   0.000  Mcount_CoefControl_cy<6> (Mcount_CoefControl_cy<6>)
+     XORCY:CI->O           1   0.206   0.000  Mcount_CoefControl_xor<7> (Result<7>)
+     FDS:D                     0.074          CoefControl_7
+    ----------------------------------------
+    Total                      2.179ns (1.413ns logic, 0.766ns route)
+                                       (64.9% logic, 35.1% route)
+
+=========================================================================
+Timing constraint: Default OFFSET IN BEFORE for Clock 'Clk_100M'
+  Total number of paths / destination ports: 43 / 32
+-------------------------------------------------------------------------
+Offset:              4.364ns (Levels of Logic = 3)
+  Source:            FilterEN (PAD)
+  Destination:       CoefRam/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/s6_init.ram/SP.WIDE_PRIM9.ram (RAM)
+  Destination Clock: Clk_100M rising
+
+  Data Path: FilterEN to CoefRam/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/s6_init.ram/SP.WIDE_PRIM9.ram
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     IBUF:I->O            34   1.328   1.661  FilterEN_IBUF (FilterEN_IBUF)
+     LUT2:I0->O            2   0.250   0.725  Mmux_Data_addra31 (Data_addra<2>)
+     begin scope: 'CoefRam:addra<2>'
+     begin scope: 'CoefRam/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr:ADDRA<2>'
+     RAMB8BWER:ADDRAWRADDR7        0.400          ramloop[0].ram.r/s6_init.ram/SP.WIDE_PRIM9.ram
+    ----------------------------------------
+    Total                      4.364ns (1.978ns logic, 2.386ns route)
+                                       (45.3% logic, 54.7% route)
+
+=========================================================================
+Timing constraint: Default OFFSET IN BEFORE for Clock 'Clk'
+  Total number of paths / destination ports: 8 / 8
+-------------------------------------------------------------------------
+Offset:              3.814ns (Levels of Logic = 2)
+  Source:            Reset (PAD)
+  Destination:       CoefControl_0 (FF)
+  Destination Clock: Clk rising
+
+  Data Path: Reset to CoefControl_0
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     IBUF:I->O             2   1.328   0.834  Reset_IBUF (Reset_IBUF)
+     LUT2:I0->O            8   0.250   0.943  FiltENOld_Reset_AND_3_o_inv1 (FiltENOld_Reset_AND_3_o_inv)
+     FDR:R                     0.459          CoefControl_0
+    ----------------------------------------
+    Total                      3.814ns (2.037ns logic, 1.777ns route)
+                                       (53.4% logic, 46.6% route)
+
+=========================================================================
+Timing constraint: Default OFFSET OUT AFTER for Clock 'Clk_100M'
+  Total number of paths / destination ports: 11 / 11
+-------------------------------------------------------------------------
+Offset:              6.629ns (Levels of Logic = 3)
+  Source:            CoefRam/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/s6_init.ram/SP.WIDE_PRIM9.ram (RAM)
+  Destination:       WzOut<10> (PAD)
+  Source Clock:      Clk_100M rising
+
+  Data Path: CoefRam/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/s6_init.ram/SP.WIDE_PRIM9.ram to WzOut<10>
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     RAMB8BWER:CLKBRDCLK->DOBDO2    1   2.100   0.682  ramloop[0].ram.r/s6_init.ram/SP.WIDE_PRIM9.ram (DOUTA<10>)
+     end scope: 'CoefRam/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr:DOUTA<10>'
+     end scope: 'CoefRam:douta<10>'
+     LUT2:I1->O            1   0.254   0.681  Mmux_WzOut21 (WzOut_10_OBUF)
+     OBUF:I->O                 2.912          WzOut_10_OBUF (WzOut<10>)
+    ----------------------------------------
+    Total                      6.629ns (5.266ns logic, 1.363ns route)
+                                       (79.4% logic, 20.6% route)
+
+=========================================================================
+Timing constraint: Default OFFSET OUT AFTER for Clock 'Clk'
+  Total number of paths / destination ports: 8 / 1
+-------------------------------------------------------------------------
+Offset:              6.283ns (Levels of Logic = 3)
+  Source:            CoefControl_4 (FF)
+  Destination:       FiltComplete (PAD)
+  Source Clock:      Clk rising
+
+  Data Path: CoefControl_4 to FiltComplete
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDS:C->Q              3   0.525   0.994  CoefControl_4 (CoefControl_4)
+     LUT3:I0->O            1   0.235   0.682  FiltComplete<7>_SW0 (N3)
+     LUT6:I5->O            1   0.254   0.681  FiltComplete<7> (FiltComplete_OBUF)
+     OBUF:I->O                 2.912          FiltComplete_OBUF (FiltComplete)
+    ----------------------------------------
+    Total                      6.283ns (3.926ns logic, 2.357ns route)
+                                       (62.5% logic, 37.5% route)
+
+=========================================================================
+Timing constraint: Default path analysis
+  Total number of paths / destination ports: 11 / 11
+-------------------------------------------------------------------------
+Delay:               6.832ns (Levels of Logic = 3)
+  Source:            FilterEN (PAD)
+  Destination:       WzOut<10> (PAD)
+
+  Data Path: FilterEN to WzOut<10>
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     IBUF:I->O            34   1.328   1.661  FilterEN_IBUF (FilterEN_IBUF)
+     LUT2:I0->O            1   0.250   0.681  Mmux_WzOut111 (WzOut_9_OBUF)
+     OBUF:I->O                 2.912          WzOut_9_OBUF (WzOut<9>)
+    ----------------------------------------
+    Total                      6.832ns (4.490ns logic, 2.342ns route)
+                                       (65.7% logic, 34.3% route)
+
+=========================================================================
+
+Cross Clock Domains Report:
+--------------------------
+
+Clock to Setup on destination clock Clk
+---------------+---------+---------+---------+---------+
+               | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+---------------+---------+---------+---------+---------+
+Clk            |    2.179|         |         |         |
+Clk_100M       |         |    2.863|         |         |
+---------------+---------+---------+---------+---------+
+
+Clock to Setup on destination clock Clk_100M
+---------------+---------+---------+---------+---------+
+               | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+---------------+---------+---------+---------+---------+
+Clk            |    2.782|         |         |         |
+---------------+---------+---------+---------+---------+
+
+=========================================================================
+
+
+Total REAL time to Xst completion: 9.00 secs
+Total CPU time to Xst completion: 8.25 secs
+ 
+--> 
+
+Total memory usage is 231268 kilobytes
+
+Number of errors   :    0 (   0 filtered)
+Number of warnings :    1 (   0 filtered)
+Number of infos    :    1 (   0 filtered)
+

@@ -1,0 +1,13 @@
+
+
+
+// Instantiate the module
+ANCControl_V instance_name (
+    .Clk_100M(Clk_100M), 
+    .SSPIF(SSPIF), 
+    .RAMDataEN(RAMDataEN), 
+    .FilterEN(FilterEN), 
+    .Reset(Reset)
+    );
+
+

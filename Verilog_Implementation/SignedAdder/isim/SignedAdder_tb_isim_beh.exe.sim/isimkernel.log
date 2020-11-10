@@ -1,0 +1,28 @@
+Command line:
+   SignedAdder_tb_isim_beh.exe
+     -simmode  gui
+     -simrunnum  0
+     -socket  58758
+
+Tue Jun 19 08:49:38 2018
+
+
+ Elaboration Time: 0.046875 sec
+
+ Current Memory Usage: 512.975 Meg
+
+ Total Signals          : 21
+ Total Nets             : 138
+ Total Signal Drivers   : 13
+ Total Blocks           : 3
+ Total Primitive Blocks : 2
+ Total Processes        : 15
+ Total Traceable Variables  : 20
+ Total Scalar Nets and Variables : 260
+
+ Total Simulation Time: 0.375 sec
+
+ Current Memory Usage: 670.269 Meg
+
+Tue Jun 19 08:51:02 2018
+

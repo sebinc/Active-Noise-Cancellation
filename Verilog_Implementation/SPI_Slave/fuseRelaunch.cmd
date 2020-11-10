@@ -1,0 +1,1 @@
+-intstyle "ise" -incremental -lib "unisims_ver" -lib "unimacro_ver" -lib "xilinxcorelib_ver" -lib "secureip" -o "X:/0_xlinx_ISE/SPI_Slave/ShiftRegister_T_isim_beh.exe" -prj "X:/0_xlinx_ISE/SPI_Slave/ShiftRegister_T_beh.prj" "work.ShiftRegister_T" "work.glbl" 

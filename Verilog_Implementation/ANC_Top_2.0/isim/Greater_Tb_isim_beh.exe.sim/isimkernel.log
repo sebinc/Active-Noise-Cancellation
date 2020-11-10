@@ -1,0 +1,28 @@
+Command line:
+   Greater_Tb_isim_beh.exe
+     -simmode  gui
+     -simrunnum  1
+     -socket  49482
+
+Wed Aug 01 08:31:54 2018
+
+
+ Elaboration Time: 0.0625 sec
+
+ Current Memory Usage: 513.004 Meg
+
+ Total Signals          : 17
+ Total Nets             : 28
+ Total Signal Drivers   : 8
+ Total Blocks           : 3
+ Total Primitive Blocks : 2
+ Total Processes        : 10
+ Total Traceable Variables  : 21
+ Total Scalar Nets and Variables : 154
+
+ Total Simulation Time: 0.328125 sec
+
+ Current Memory Usage: 670.298 Meg
+
+Wed Aug 01 08:32:43 2018
+

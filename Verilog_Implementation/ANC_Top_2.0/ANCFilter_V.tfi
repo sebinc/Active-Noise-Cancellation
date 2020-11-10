@@ -1,0 +1,15 @@
+
+
+
+// Instantiate the module
+ANCFilter_V instance_name (
+    .FilterEN(FilterEN), 
+    .Clk_100M(Clk_100M), 
+    .Reset(Reset), 
+    .SigIn(SigIn), 
+    .Wz(Wz), 
+    .Synch(Synch), 
+    .FiltOut(FiltOut)
+    );
+
+

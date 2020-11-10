@@ -1,0 +1,16 @@
+
+
+
+// Instantiate the module
+ANCTop_V instance_name (
+    .Clk_100M(Clk_100M), 
+    .SCK(SCK), 
+    .SDI(SDI), 
+    .SDO(SDO), 
+    .ResetSwitch(ResetSwitch), 
+    .AudioL(AudioL), 
+    .AudioR(AudioR), 
+    .SPI_LED(SPI_LED)
+    );
+
+
