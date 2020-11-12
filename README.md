@@ -12,10 +12,10 @@ Active Noise Cancellation of surrounding noise using dedicated mic to the headse
    Matlab 2013a for Simulation
 
 System Architecture diagram for the ANC system is 
-[ANC_SYSTEM_ARCHITECTURE](System_Architecture.jpg)
+![ANC_SYSTEM_ARCHITECTURE](System_Architecture.jpg)
 
-Software architecture is 
-[SW_ARCHITECTURE](Verilog_Architecture.PNG)
+And the Software architecture is 
+![SW_ARCHITECTURE](Verilog_Architecture.PNG)
 
 Sample simulation result is [here](\Matlab Simulation\ANCModel.png)
 
