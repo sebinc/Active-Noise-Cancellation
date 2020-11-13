@@ -1,0 +1,311 @@
+
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html><head>
+      <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+   <!--
+This HTML was auto-generated from MATLAB code.
+To make changes, update the MATLAB code and republish this document.
+      --><title>ANCModel</title><meta name="generator" content="MATLAB 8.1"><link rel="schema.DC" href="http://purl.org/dc/elements/1.1/"><meta name="DC.date" content="2018-05-13"><meta name="DC.source" content="ANCModel.m"><style type="text/css">
+html,body,div,span,applet,object,iframe,h1,h2,h3,h4,h5,h6,p,blockquote,pre,a,abbr,acronym,address,big,cite,code,del,dfn,em,font,img,ins,kbd,q,s,samp,small,strike,strong,sub,sup,tt,var,b,u,i,center,dl,dt,dd,ol,ul,li,fieldset,form,label,legend,table,caption,tbody,tfoot,thead,tr,th,td{margin:0;padding:0;border:0;outline:0;font-size:100%;vertical-align:baseline;background:transparent}body{line-height:1}ol,ul{list-style:none}blockquote,q{quotes:none}blockquote:before,blockquote:after,q:before,q:after{content:'';content:none}:focus{outine:0}ins{text-decoration:none}del{text-decoration:line-through}table{border-collapse:collapse;border-spacing:0}
+
+html { min-height:100%; margin-bottom:1px; }
+html body { height:100%; margin:0px; font-family:Arial, Helvetica, sans-serif; font-size:10px; color:#000; line-height:140%; background:#fff none; overflow-y:scroll; }
+html body td { vertical-align:top; text-align:left; }
+
+h1 { padding:0px; margin:0px 0px 25px; font-family:Arial, Helvetica, sans-serif; font-size:1.5em; color:#d55000; line-height:100%; font-weight:normal; }
+h2 { padding:0px; margin:0px 0px 8px; font-family:Arial, Helvetica, sans-serif; font-size:1.2em; color:#000; font-weight:bold; line-height:140%; border-bottom:1px solid #d6d4d4; display:block; }
+h3 { padding:0px; margin:0px 0px 5px; font-family:Arial, Helvetica, sans-serif; font-size:1.1em; color:#000; font-weight:bold; line-height:140%; }
+
+a { color:#005fce; text-decoration:none; }
+a:hover { color:#005fce; text-decoration:underline; }
+a:visited { color:#004aa0; text-decoration:none; }
+
+p { padding:0px; margin:0px 0px 20px; }
+img { padding:0px; margin:0px 0px 20px; border:none; }
+p img, pre img, tt img, li img { margin-bottom:0px; } 
+
+ul { padding:0px; margin:0px 0px 20px 23px; list-style:square; }
+ul li { padding:0px; margin:0px 0px 7px 0px; }
+ul li ul { padding:5px 0px 0px; margin:0px 0px 7px 23px; }
+ul li ol li { list-style:decimal; }
+ol { padding:0px; margin:0px 0px 20px 0px; list-style:decimal; }
+ol li { padding:0px; margin:0px 0px 7px 23px; list-style-type:decimal; }
+ol li ol { padding:5px 0px 0px; margin:0px 0px 7px 0px; }
+ol li ol li { list-style-type:lower-alpha; }
+ol li ul { padding-top:7px; }
+ol li ul li { list-style:square; }
+
+.content { font-size:1.2em; line-height:140%; padding: 20px; }
+
+pre, tt, code { font-size:12px; }
+pre { margin:0px 0px 20px; }
+pre.error { color:red; }
+pre.codeinput { padding:10px; border:1px solid #d3d3d3; background:#f7f7f7; }
+pre.codeoutput { padding:10px 11px; margin:0px 0px 20px; color:#4c4c4c; }
+
+@media print { pre.codeinput, pre.codeoutput { word-wrap:break-word; width:100%; } }
+
+span.keyword { color:#0000FF }
+span.comment { color:#228B22 }
+span.string { color:#A020F0 }
+span.untermstring { color:#B20000 }
+span.syscmd { color:#B28C00 }
+
+.footer { width:auto; padding:10px 0px; margin:25px 0px 0px; border-top:1px dotted #878787; font-size:0.8em; line-height:140%; font-style:italic; color:#878787; text-align:left; float:none; }
+.footer p { margin:0px; }
+.footer a { color:#878787; }
+.footer a:hover { color:#878787; text-decoration:underline; }
+.footer a:visited { color:#878787; }
+
+table th { padding:7px 5px; text-align:left; vertical-align:middle; border: 1px solid #d6d4d4; font-weight:bold; }
+table td { padding:7px 5px; text-align:left; vertical-align:top; border:1px solid #d6d4d4; }
+
+
+
+
+
+  </style></head><body><div class="content"><h1></h1><!--introduction--><!--/introduction--><h2>Contents</h2><div><ul><li><a href="#1">Matlab initialization.</a></li><li><a href="#2">Global variable initializations</a></li><li><a href="#3">Generate the Primary signal ( Audio signal )</a></li><li><a href="#4">Generate the Primary noise signal</a></li><li><a href="#5">Generate the difference of noise with primary signal</a></li><li><a href="#7">ANC implementation</a></li></ul></div><h2>Matlab initialization.<a name="1"></a></h2><p>Clearing all signals and plots</p><pre class="codeinput">clc
+clear <span class="string">all</span>
+close <span class="string">all</span>
+TRUE  = 1;
+FALSE = 0;
+load <span class="string">Wz.mat</span>
+</pre><h2>Global variable initializations<a name="2"></a></h2><pre class="codeinput"><span class="comment">%Initialising signal attributes and  control signals</span>
+
+Fn            = 10;                      <span class="comment">% Frequency of noise required</span>
+Time          = 4;                       <span class="comment">% Total time of the sample signal to process in Sec</span>
+Fs            = 4000;                    <span class="comment">% Sampling frequency</span>
+Ts            = 1/Fs;                    <span class="comment">% Sampling time</span>
+FiltOrder     = 128;                     <span class="comment">% Filter order</span>
+t             = 0:Ts:Time-Ts;            <span class="comment">% Sampling agent</span>
+SigSize       = length(t);               <span class="comment">% Signal size for testing</span>
+mu            = 0.02;                    <span class="comment">% Adaptive algorithm coefficient.</span>
+Control       = [1 2];                   <span class="comment">% 1 = LMS, 2 = LMS+PID, 3 = FxLMS, 4 = FxLMS + PID</span>
+AntiPhaseF    = 0.5;                     <span class="comment">% Anti - phase factor</span>
+<span class="comment">%Wz            = (0.05*(0:FiltOrder-1)).^2;% Initial filter coefficients ; ones(1,FiltOrder);</span>
+
+
+<span class="comment">%Generic session control</span>
+DisplayPrimary        = FALSE;           <span class="comment">% Display primary signal and noise. 1 = show, 0 = do not show</span>
+DisplayPrimDiffSig    = FALSE;           <span class="comment">% Display signal difference between signal and noise.</span>
+SigAntiphase          = FALSE;           <span class="comment">% Primary signal is added with anti - phase of primary noise</span>
+SigPrediction         = FALSE;           <span class="comment">% Primary future error will predict based on history</span>
+</pre><h2>Generate the Primary signal ( Audio signal )<a name="3"></a></h2><p>This is the model sigal coming from Audio device</p><pre class="codeinput">PrimSig = 0.2 * ( 2*wgn(1,SigSize,0) + randn(1,SigSize));
+DesiredSig = PrimSig;
+<span class="keyword">if</span> DisplayPrimary == TRUE
+figure
+plot(t,PrimSig)
+title(<span class="string">'Primary signal'</span>);xlabel(<span class="string">'Time Sec'</span>);ylabel(<span class="string">'Amplitude'</span>);
+<span class="keyword">end</span>
+</pre><h2>Generate the Primary noise signal<a name="4"></a></h2><p>This is the model sigal coming from primary noise microphone</p><pre class="codeinput">PrimNoise = 0.015 * ( 3.8 * wgn(1,SigSize,0) + 5 * randn(1,SigSize)  + 15*sin(2*pi*t*Fn));
+<span class="keyword">if</span> DisplayPrimary == TRUE
+figure
+plot(t,PrimNoise)
+title(<span class="string">'Noise signal'</span>);xlabel(<span class="string">'Time Sec'</span>);ylabel(<span class="string">'Amplitude'</span>);
+<span class="keyword">end</span>
+</pre><h2>Generate the difference of noise with primary signal<a name="5"></a></h2><p>For visual inspection</p><pre class="codeinput">PrimDiffSig = PrimSig - PrimNoise;
+<span class="keyword">if</span> DisplayPrimDiffSig == TRUE
+figure
+plot(t,PrimSig, <span class="string">'b'</span>);
+hold <span class="string">on</span>
+plot(t,PrimDiffSig, <span class="string">'g'</span>);
+hold <span class="string">off</span>
+<span class="keyword">end</span>
+</pre><pre class="codeinput"><span class="comment">%Primary signal needs to pass through many electronic components so require</span>
+<span class="comment">%a transfer function ( H ) multiplication to find the desired signal</span>
+
+Tf_num = [8 18 32];
+Tf_den = [2 6 14 56];
+H = tf(Tf_num, Tf_den, Fs);
+</pre><h2>ANC implementation<a name="7"></a></h2><p>Based on control signal various options will be enabled.</p><pre class="codeinput"><span class="comment">% Anti phase signal</span>
+<span class="keyword">if</span> SigAntiphase == TRUE
+    PrimSig = PrimSig - AntiPhaseF * PrimNoise;
+<span class="keyword">end</span>
+
+<span class="comment">% Initialse buffer</span>
+e = zeros(1, SigSize);                   <span class="comment">% Initialise error to zero</span>
+Signal = [zeros(1,FiltOrder),PrimSig + PrimNoise];   <span class="comment">% Make signal length depend on filter order for calculation</span>
+
+<span class="keyword">for</span> i = 1:length(Control)
+    <span class="keyword">for</span> n = 1:SigSize
+
+        <span class="comment">%Reversing the signal. Need to treat latest signal value with the</span>
+        <span class="comment">%leftmost coeffient</span>
+        SigVector = Signal( n +FiltOrder -1 : -1 : n);
+        e(n) = DesiredSig(n) - Wz * SigVector';                <span class="comment">% Update the error</span>
+        Wz = Wz + mu * SigVector * e(n);
+
+    <span class="keyword">end</span>
+
+    <span class="comment">% Quality of the filter is to produce the minimum average error</span>
+    Q = mean(abs(e));
+
+    <span class="comment">% Display the output</span>
+    <span class="keyword">if</span> Control(i) == 1
+        fprintf(<span class="string">'Quality of LMS filter is       = %d.\n'</span>,Q);
+
+        plot(t,e); title(<span class="string">'Error LMS'</span>);xlabel(<span class="string">'Time Sec'</span>);ylabel(<span class="string">'Amplitude'</span>);
+        hold <span class="string">on</span>
+        plot(t,PrimNoise, <span class="string">'r'</span>);
+        hold <span class="string">off</span>
+    <span class="keyword">end</span>
+    <span class="keyword">if</span> Control(i) == 2
+        fprintf(<span class="string">'Quality of LMS+PID filter is   = %d.\n'</span>,Q);
+        plot(t,e); title(<span class="string">'Error LMS+PID'</span>);xlabel(<span class="string">'Time Sec'</span>);ylabel(<span class="string">'Amplitude'</span>);
+        hold <span class="string">on</span>
+        plot(t,PrimNoise, <span class="string">'r'</span>);
+        hold <span class="string">off</span>
+    <span class="keyword">end</span>
+    <span class="keyword">if</span> Control(i) == 3
+        fprintf(<span class="string">'Quality of FxLMS+PID filter is = %d.\n'</span>,Q);
+        plot(t,e); title(<span class="string">'Error FxLMS'</span>);xlabel(<span class="string">'Time Sec'</span>);ylabel(<span class="string">'Amplitude'</span>);
+    <span class="keyword">end</span>
+    <span class="keyword">if</span> Control(i) == 4
+        fprintf(<span class="string">'Quality of FxLMS+PID filter is = %d.\n'</span>,Q);
+        plot(t,e); title(<span class="string">'Error FxLMS+PID'</span>);xlabel(<span class="string">'Time Sec'</span>);ylabel(<span class="string">'Amplitude'</span>);
+    <span class="keyword">end</span>
+
+<span class="keyword">end</span>
+</pre><pre class="codeoutput">Quality of LMS filter is       = 4.293388e-01.
+Quality of LMS+PID filter is   = 4.295029e-01.
+</pre><img vspace="5" hspace="5" src="ANCModel_01.png" alt=""> <p class="footer"><br><a href="http://www.mathworks.com/products/matlab/">Published with MATLAB&reg; R2013a</a><br></p></div><!--
+##### SOURCE BEGIN #####
+
+%% Matlab initialization.
+% Clearing all signals and plots
+
+
+clc
+clear all
+close all
+TRUE  = 1;
+FALSE = 0;
+load Wz.mat
+
+
+%% Global variable initializations
+%Initialising signal attributes and  control signals
+
+Fn            = 10;                      % Frequency of noise required
+Time          = 4;                       % Total time of the sample signal to process in Sec               
+Fs            = 4000;                    % Sampling frequency
+Ts            = 1/Fs;                    % Sampling time
+FiltOrder     = 128;                     % Filter order
+t             = 0:Ts:Time-Ts;            % Sampling agent
+SigSize       = length(t);               % Signal size for testing
+mu            = 0.02;                    % Adaptive algorithm coefficient.
+Control       = [1 2];                   % 1 = LMS, 2 = LMS+PID, 3 = FxLMS, 4 = FxLMS + PID
+AntiPhaseF    = 0.5;                     % Anti - phase factor
+%Wz            = (0.05*(0:FiltOrder-1)).^2;% Initial filter coefficients ; ones(1,FiltOrder);
+
+
+%Generic session control
+DisplayPrimary        = FALSE;           % Display primary signal and noise. 1 = show, 0 = do not show
+DisplayPrimDiffSig    = FALSE;           % Display signal difference between signal and noise.
+SigAntiphase          = FALSE;           % Primary signal is added with anti - phase of primary noise 
+SigPrediction         = FALSE;           % Primary future error will predict based on history
+
+
+%% Generate the Primary signal ( Audio signal )
+% This is the model sigal coming from Audio device
+
+PrimSig = 0.2 * ( 2*wgn(1,SigSize,0) + randn(1,SigSize));
+DesiredSig = PrimSig;
+if DisplayPrimary == TRUE
+figure
+plot(t,PrimSig)
+title('Primary signal');xlabel('Time Sec');ylabel('Amplitude');
+end 
+
+
+
+%% Generate the Primary noise signal
+% This is the model sigal coming from primary noise microphone
+
+PrimNoise = 0.015 * ( 3.8 * wgn(1,SigSize,0) + 5 * randn(1,SigSize)  + 15*sin(2*pi*t*Fn));
+if DisplayPrimary == TRUE
+figure
+plot(t,PrimNoise)
+title('Noise signal');xlabel('Time Sec');ylabel('Amplitude');
+end
+
+
+%% Generate the difference of noise with primary signal
+% For visual inspection
+
+PrimDiffSig = PrimSig - PrimNoise;
+if DisplayPrimDiffSig == TRUE
+figure
+plot(t,PrimSig, 'b');
+hold on
+plot(t,PrimDiffSig, 'g');
+hold off
+end
+
+%%
+%Primary signal needs to pass through many electronic components so require
+%a transfer function ( H ) multiplication to find the desired signal
+
+Tf_num = [8 18 32];
+Tf_den = [2 6 14 56];
+H = tf(Tf_num, Tf_den, Fs);
+
+
+%% ANC implementation
+% Based on control signal various options will be enabled.
+
+% Anti phase signal
+if SigAntiphase == TRUE
+    PrimSig = PrimSig - AntiPhaseF * PrimNoise;
+end
+
+% Initialse buffer
+e = zeros(1, SigSize);                   % Initialise error to zero
+Signal = [zeros(1,FiltOrder),PrimSig + PrimNoise];   % Make signal length depend on filter order for calculation
+
+for i = 1:length(Control)
+    for n = 1:SigSize
+        
+        %Reversing the signal. Need to treat latest signal value with the
+        %leftmost coeffient
+        SigVector = Signal( n +FiltOrder -1 : -1 : n);
+        e(n) = DesiredSig(n) - Wz * SigVector';                % Update the error
+        Wz = Wz + mu * SigVector * e(n);
+        
+    end
+    
+    % Quality of the filter is to produce the minimum average error
+    Q = mean(abs(e));
+    
+    % Display the output
+    if Control(i) == 1
+        fprintf('Quality of LMS filter is       = %d.\n',Q);
+        
+        plot(t,e); title('Error LMS');xlabel('Time Sec');ylabel('Amplitude');
+        hold on
+        plot(t,PrimNoise, 'r');
+        hold off
+    end
+    if Control(i) == 2
+        fprintf('Quality of LMS+PID filter is   = %d.\n',Q);
+        plot(t,e); title('Error LMS+PID');xlabel('Time Sec');ylabel('Amplitude');
+        hold on
+        plot(t,PrimNoise, 'r');
+        hold off
+    end
+    if Control(i) == 3
+        fprintf('Quality of FxLMS+PID filter is = %d.\n',Q);
+        plot(t,e); title('Error FxLMS');xlabel('Time Sec');ylabel('Amplitude');
+    end
+    if Control(i) == 4
+        fprintf('Quality of FxLMS+PID filter is = %d.\n',Q);
+        plot(t,e); title('Error FxLMS+PID');xlabel('Time Sec');ylabel('Amplitude');
+    end
+    
+end
+%%
+
+
+##### SOURCE END #####
+--></body></html>
