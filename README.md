@@ -22,6 +22,6 @@ And the Software architecture is
 
 Sample simulation result is [here](Matlab_Simulation/ANCModel.png)
 
-and simulation code [here](/Matlab_Simulation/ANCModel.html)
+and simulation code [here](/Matlab_Simulation/Code/ANCModel.m)
 
 The project is still under development......
